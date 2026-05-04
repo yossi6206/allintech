@@ -878,6 +878,13 @@ a.theme-btn.style-five:hover {
     padding: 0;
     margin-bottom: 5px;
     background: transparent;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.banner-inner {
+    text-align: right;
+    direction: rtl;
 }
 
 .breadcrumb-item a,
@@ -896,7 +903,7 @@ a.theme-btn.style-five:hover {
     content: "\f105";
     margin: 0 10px;
     color: white;
-    float: left;
+    float: right;
     font-weight: 600;
     font-family: "Font Awesome 5 Free"
 }
@@ -1992,12 +1999,16 @@ a.theme-btn.style-five:hover {
     margin-bottom: 12px;
 }
 
+.blog-item .image {
+    position: relative;
+}
+
 .blog-author {
     left: 30px;
+    bottom: -18px;
     padding: 6px;
     display: flex;
     background: white;
-    margin-top: -25px;
     border-radius: 5px;
     position: absolute;
     align-items: center;
