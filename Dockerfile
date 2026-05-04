@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y libcurl4-openssl-dev \
 
 COPY HTML/ /var/www/html/
 
-RUN echo "DirectoryIndex index3.html index.html" > /etc/apache2/conf-enabled/directoryindex.conf
+RUN cp /var/www/html/index3.html /var/www/html/index.html
 
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
