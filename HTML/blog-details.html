@@ -47,7 +47,7 @@
         .blog-meta li { margin-left: 0; margin-right: 15px; }
         .tag-clouds { direction: rtl; text-align: right; }
         .copyright-area { direction: rtl; }
-        .comment-item { direction: rtl; text-align: right; }
+        .comment-item { direction: rtl; text-align: right; gap: 20px; }
         .comment-details { text-align: right; }
         .name-date { direction: rtl; }
         .blog-footer { direction: rtl; }
@@ -56,13 +56,21 @@
         .reply { float: left; }
         blockquote { direction: rtl; text-align: right; border-right: 4px solid #1d6ef5; border-left: none; padding-right: 20px; padding-left: 0; }
         .contact-form-three .form-group input, .contact-form-three .form-group textarea { text-align: right; }
-        .admin-comment { direction: rtl; text-align: right; }
+        .admin-comment { direction: rtl; text-align: right; gap: 24px; }
+        .admin-comment .author-image img,
+        .comments .author-image img { object-fit: cover; object-position: center; }
         /* Fix broken dropdown icon from menu.css */
         .navigation li.dropdown > a::after,
         .navigation li.dropdown > a::before { display: none !important; content: none !important; }
         .navigation li.dropdown > a .fa-chevron-down { font-size: 10px; margin-right: 4px; opacity: 0.7; }
         /* Fix search placeholder */
         .nav-search input { direction: rtl; }
+        .news-widget-item img { width: 100px; height: 100px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
+        .news-widget-item { margin-bottom: 20px; gap: 14px; }
+        .news-widget-item:last-child { margin-bottom: 0; }
+        .blog-footer .social { align-items: center; gap: 14px; }
+        .blog-footer .social b { margin: 0; }
+        .blog-footer .social a { margin: 0 !important; line-height: 1; }
     </style>
     <!--====== Font Awesome ======-->
     <link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css">
@@ -196,7 +204,7 @@
         <section class="page-banner bg-blue rel z-1" style="background-image: url(assets/images/background/banner-bg.png);">
             <div class="container">
                 <div class="banner-inner">
-                    <h1 class="page-title wow fadeInUp delay-0-2s">פרטי פוסט</h1>
+                    <h1 class="page-title wow fadeInUp delay-0-2s" id="article-page-title">פרטי פוסט</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb wow fadeInUp delay-0-4s">
                             <li class="breadcrumb-item"><a href="index.html">דף הבית</a></li>
@@ -221,29 +229,29 @@
                     <div class="col-lg-8">
                         <div class="blog-details-content rmb-75">
                             <div class="blog-standard-item">
-                                <img src="assets/images/blog/blog-details.jpg" alt="Blog">
+                                <img id="article-image" src="assets/images/blog/custom-code-article.png" alt="פיתוח בקוד שמותאם בדיוק לעסק שלך">
                                 <ul class="blog-meta">
-                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></li>
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html" id="article-date">25 מרץ 2022</a></li>
                                     <li><i class="far fa-comments"></i> <a href="#">תגובות (05)</a></li>
                                     <li><i class="far fa-share-square"></i> <a href="#">שיתופים (5k)</a></li>
                                 </ul>
-                                <h2>כל מה שרצית לדעת על יצירת ממשקי משתמש קוליים</h2>
-                                <p>עיצוב ממשק משתמש קולי הוא תחום מרתק המשלב טכנולוגיה מתקדמת עם הבנה עמוקה של חוויית המשתמש. על מנת ליצור ממשק קולי אפקטיבי, יש להבין את הצרכים של המשתמש ולתכנן זרימות שיחה טבעיות. המפתחים נדרשים להכיר את הכלים הזמינים ולהשתמש בהם בצורה חכמה. ממשקים קוליים מוצלחים מצריכים שילוב של עיצוב UX, בינה מלאכותית ועיבוד שפה טבעית. חשוב לבדוק את הממשק עם משתמשים אמיתיים ולשפר אותו בהתאם למשוב שמתקבל.</p>
+                                <h2 id="article-title">פיתוח בקוד שמותאם בדיוק לעסק שלך</h2>
+                                <p id="article-intro">אתר שנבנה בקוד מתחיל מהצרכים האמיתיים של העסק, ולא מהמגבלות של תבנית מוכנה. כל אזור, רכיב וכפתור מתוכננים לפי המטרה של הדף: להסביר מהר, להיראות מקצועי ולהוביל את הגולש לפעולה ברורה.</p>
                                 <blockquote>
-                                    <p>הרחבות VS Code שימושיות למפתחי פרונטאנד - מדריך לתמיכה ב-CSS מודרני</p>
+                                    <p id="article-quote">כשבונים מאפס בקוד, האתר מתאים את עצמו לעסק ולא העסק מתאים את עצמו לתבנית.</p>
                                     <div class="name-designation">
-                                        <span class="name">דוד וו. סטיוארט,</span>
-                                        <span class="designation">מעצב אתרים</span>
+                                        <span class="name" id="article-author">דניאל כהן,</span>
+                                        <span class="designation" id="article-role">מפתח אתרים</span>
                                     </div>
                                 </blockquote>
-                                <p>ממשקים קוליים הופכים לנפוצים יותר ויותר בעולם הטכנולוגיה המודרנית. עיצוב נכון של ממשק כזה דורש הבנה מעמיקה של הרגלי השימוש של המשתמשים ויצירת חוויה חלקה ואינטואיטיבית.</p>
+                                <p id="article-body">בפיתוח בקוד אפשר לשלוט בכל פרט: מבנה העמוד, סדר התוכן, חוויית המשתמש, התאמות מובייל וביצועים. התוצאה היא אתר מדויק יותר, קל יותר לתחזוקה, מהיר יותר לטעינה והרבה יותר נכון למותג שלך.</p>
                                 
                                 <div class="blog-footer d-flex flex-wrap align-items-center pt-25">
                                     <div class="tags mb-10 mr-auto">
                                         <b>תגיות </b> 
-                                        <a href="blog.html">דף נחיתה</a>
-                                        <a href="blog.html">SAAS</a>
-                                        <a href="blog.html">עיצוב</a>
+                                        <a href="blog.html" id="article-tag-one">פיתוח בקוד</a>
+                                        <a href="blog.html" id="article-tag-two">אתר מותאם אישית</a>
+                                        <a href="blog.html" id="article-tag-three">בידול עסקי</a>
                                     </div>
                                     <div class="social mb-10">
                                         <b>שתף: </b>
@@ -256,11 +264,11 @@
                             
                             <div class="comment-item admin-comment p-40 text-white bg-blue mb-75 wow fadeInUp delay-0-2s">
                                 <div class="author-image">
-                                    <img src="assets/images/blog/admin.jpg" alt="Author">
+                                    <img id="article-author-image" src="assets/images/blog/author-daniel.jpg" alt="דניאל כהן">
                                 </div>
                                 <div class="comment-details">
-                                    <h3>לינדסי מ. בראונלי</h3>
-                                    <p>מעצבת ומפתחת בכירה עם ניסיון של למעלה מעשר שנים בתחום עיצוב חוויית המשתמש ופיתוח אתרים. כותבת ומרצה בתחומי UX/UI ועיצוב גרפי.</p>
+                                    <h3 id="article-author-card-name">דניאל כהן</h3>
+                                    <p id="article-author-bio">מפתח אתרים שמתמחה בבניית אתרים בקוד נקי ומותאם אישית לעסקים שרוצים אתר מדויק, מהיר וקל לתחזוקה.</p>
                                     <div class="social mt-15">
                                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -275,11 +283,11 @@
                                <h3 class="comment-title pt-30 mb-40">תגובות קוראים</h3>
                                 <div class="comment-item wow fadeInUp delay-0-2s">
                                     <div class="author-image">
-                                        <img src="assets/images/blog/comment-author-1.jpg" alt="Author">
+                                        <img src="assets/images/blog/author-noa.jpg" alt="נועה לוי">
                                     </div>
                                     <div class="comment-details">
                                         <div class="name-date">
-                                            <h4>יוחנן פ. מדינה</h4>
+                                            <h4>נועה לוי</h4>
                                             <span class="date">25 פברואר 2022</span>
                                         </div>
                                         <p>מאמר מצוין ומעניין מאוד! תוכן מקיף שמכסה את כל ההיבטים החשובים של הנושא. ממליץ בחום לכל מי שמתעניין בתחום.</p>
@@ -288,11 +296,11 @@
                                 </div>
                                 <div class="comment-item child-comment wow fadeInUp delay-0-4s">
                                     <div class="author-image">
-                                        <img src="assets/images/blog/comment-author-2.jpg" alt="Author">
+                                        <img src="assets/images/blog/author-itai.jpg" alt="איתי שרון">
                                     </div>
                                     <div class="comment-details">
                                         <div class="name-date">
-                                            <h4>גרייס ל. פרימן</h4>
+                                            <h4>איתי שרון</h4>
                                             <span class="date">25 פברואר 2022</span>
                                         </div>
                                         <p>מסכימה לחלוטין! הנקודות שהועלו כאן רלוונטיות מאוד לעבודה היומיומית שלנו כמעצבים ומפתחים.</p>
@@ -301,11 +309,11 @@
                                 </div>
                                 <div class="comment-item wow fadeInUp delay-0-6s">
                                     <div class="author-image">
-                                        <img src="assets/images/blog/comment-author-3.jpg" alt="Author">
+                                        <img src="assets/images/blog/author-michal.jpg" alt="מיכל אברהם">
                                     </div>
                                     <div class="comment-details">
                                         <div class="name-date">
-                                            <h4>אלכסנדר אלכס</h4>
+                                            <h4>מיכל אברהם</h4>
                                             <span class="date">25 פברואר 2022</span>
                                         </div>
                                         <p>תודה על המאמר המעמיק! שיתפתי אותו עם הצוות שלי ועורר דיון מעניין. מחכה למאמרים נוספים בסדרה.</p>
@@ -373,24 +381,31 @@
                                <h3 class="widget-title">חדשות אחרונות</h3>
                                 <div class="news-widget-wrap">
                                     <div class="news-widget-item">
-                                        <img src="assets/images/widgets/news1.jpg" alt="News">
+                                        <img src="assets/images/blog/custom-code-article.png" alt="פיתוח בקוד שמותאם בדיוק לעסק שלך">
                                         <div class="content">
-                                            <h5><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקים</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></span>
+                                            <h5><a href="blog-details.html?article=custom-code">פיתוח בקוד שמותאם בדיוק לעסק שלך</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=custom-code">25 מרץ 2022</a></span>
                                         </div>
                                     </div>
                                     <div class="news-widget-item">
-                                        <img src="assets/images/widgets/news2.jpg" alt="News">
+                                        <img src="assets/images/blog/clean-code-performance-article.png" alt="קוד נקי שמטעין מהר וממיר יותר">
                                         <div class="content">
-                                            <h5><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקים</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></span>
+                                            <h5><a href="blog-details.html?article=clean-code">קוד נקי שמטעין מהר וממיר יותר</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=clean-code">25 מרץ 2022</a></span>
                                         </div>
                                     </div>
                                     <div class="news-widget-item">
-                                        <img src="assets/images/widgets/news3.jpg" alt="News">
+                                        <img src="assets/images/blog/full-control-platform-article.png" alt="שליטה מלאה בלי תלות בפלטפורמות">
                                         <div class="content">
-                                            <h5><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקים</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></span>
+                                            <h5><a href="blog-details.html?article=full-control">שליטה מלאה בלי תלות בפלטפורמות</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=full-control">25 מרץ 2022</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="news-widget-item">
+                                        <img src="assets/images/blog/conversion-design-article.png" alt="עיצוב ופיתוח שמובילים לפעולה">
+                                        <div class="content">
+                                            <h5><a href="blog-details.html?article=conversion-design">עיצוב ופיתוח שמובילים לפעולה</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=conversion-design">25 מרץ 2022</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -564,6 +579,88 @@
     <script src="assets/js/slick.min.js"></script>
     <!--====== Main JS ======-->
     <script src="assets/js/script.js"></script>
+    <script>
+        const articleContent = {
+            'custom-code': {
+                title: 'פיתוח בקוד שמותאם בדיוק לעסק שלך',
+                image: 'assets/images/blog/custom-code-article.png',
+                alt: 'פיתוח בקוד שמותאם בדיוק לעסק שלך',
+                intro: 'אתר שנבנה בקוד מתחיל מהצרכים האמיתיים של העסק, ולא מהמגבלות של תבנית מוכנה. כל אזור, רכיב וכפתור מתוכננים לפי המטרה של הדף: להסביר מהר, להיראות מקצועי ולהוביל את הגולש לפעולה ברורה.',
+                quote: 'כשבונים מאפס בקוד, האתר מתאים את עצמו לעסק ולא העסק מתאים את עצמו לתבנית.',
+                author: 'דניאל כהן,',
+                role: 'מפתח אתרים',
+                authorImage: 'assets/images/blog/author-daniel.jpg',
+                authorAlt: 'דניאל כהן',
+                authorBio: 'מפתח אתרים שמתמחה בבניית אתרים בקוד נקי ומותאם אישית לעסקים שרוצים אתר מדויק, מהיר וקל לתחזוקה.',
+                body: 'בפיתוח בקוד אפשר לשלוט בכל פרט: מבנה העמוד, סדר התוכן, חוויית המשתמש, התאמות מובייל וביצועים. התוצאה היא אתר מדויק יותר, קל יותר לתחזוקה, מהיר יותר לטעינה והרבה יותר נכון למותג שלך.',
+                tags: ['פיתוח בקוד', 'אתר מותאם אישית', 'בידול עסקי']
+            },
+            'clean-code': {
+                title: 'קוד נקי שמטעין מהר וממיר יותר',
+                image: 'assets/images/blog/clean-code-performance-article.png',
+                alt: 'קוד נקי שמטעין מהר וממיר יותר',
+                intro: 'מהירות טעינה היא לא רק עניין טכני, היא משפיעה ישירות על חוויית המשתמש ועל כמות הפניות שהאתר מייצר. קוד נקי ורזה מוריד עומסים מיותרים ומציג לגולש את המסר במהירות.',
+                quote: 'אתר מהיר מרגיש מקצועי יותר, משאיר יותר גולשים ומגדיל את הסיכוי לפנייה.',
+                author: 'נועה לוי,',
+                role: 'מומחית חוויית משתמש',
+                authorImage: 'assets/images/blog/author-noa.jpg',
+                authorAlt: 'נועה לוי',
+                authorBio: 'מומחית חוויית משתמש שמלווה עסקים בשיפור מהירות, זרימה ונגישות של אתרים כדי להפוך ביקורים לפניות איכותיות.',
+                body: 'כאשר האתר לא עמוס בתוספים, ספריות מיותרות ותבניות כבדות, כל עמוד נטען בצורה חלקה יותר. זה משפר את חוויית הגלישה, את הנראות בגוגל ואת היכולת להפוך מבקרים ללקוחות.',
+                tags: ['קוד נקי', 'ביצועים', 'המרות']
+            },
+            'full-control': {
+                title: 'שליטה מלאה בלי תלות בפלטפורמות',
+                image: 'assets/images/blog/full-control-platform-article.png',
+                alt: 'שליטה מלאה בלי תלות בפלטפורמות',
+                intro: 'אתר בקוד נותן לך בעלות ושליטה מלאה על מה שקורה באתר. אין צורך להתאים את העסק למגבלות של מערכת, תבנית או תוסף שלא נבנו במיוחד בשבילך.',
+                quote: 'כשאין תלות בפלטפורמה, אפשר לשנות, לשפר ולהרחיב את האתר בדיוק לפי הצורך.',
+                author: 'איתי שרון,',
+                role: 'מפתח Full Stack',
+                authorImage: 'assets/images/blog/author-itai.jpg',
+                authorAlt: 'איתי שרון',
+                authorBio: 'מפתח Full Stack שמתמקד בבניית מערכות ואתרים גמישים, עצמאיים וניתנים להרחבה בלי תלות בפלטפורמות סגורות.',
+                body: 'פיתוח עצמאי מאפשר להוסיף פונקציות, לשנות עיצוב, לבצע אופטימיזציה ולתחזק את האתר בלי להיות כבול למערכת חיצונית. זה נותן גמישות לטווח ארוך ומונע עלויות ותלויות מיותרות.',
+                tags: ['שליטה מלאה', 'ללא תבניות', 'גמישות']
+            },
+            'conversion-design': {
+                title: 'עיצוב ופיתוח שמובילים לפעולה',
+                image: 'assets/images/blog/conversion-design-article.png',
+                alt: 'עיצוב ופיתוח שמובילים לפעולה',
+                intro: 'אתר יפה הוא רק ההתחלה. כדי שהאתר יעבוד בשביל העסק, כל כותרת, תמונה, כפתור ומקטע צריכים להוביל את הגולש בצורה טבעית לפעולה הבאה.',
+                quote: 'עיצוב נכון לא רק נראה טוב, הוא גורם לגולש להבין מהר למה כדאי לו לפנות.',
+                author: 'מיכל אברהם,',
+                role: 'מעצבת ממשקים',
+                authorImage: 'assets/images/blog/author-michal.jpg',
+                authorAlt: 'מיכל אברהם',
+                authorBio: 'מעצבת ממשקים שמחברת בין עיצוב, מסרים וחוויית משתמש כדי ליצור אתרים שמובילים את הגולש לפעולה ברורה.',
+                body: 'שילוב נכון בין עיצוב ופיתוח מאפשר ליצור מסלול גלישה ברור: מהמסר הראשון, דרך הצגת היתרונות ועד יצירת קשר. כך האתר הופך מכלי תדמיתי לכלי שמייצר פניות אמיתיות.',
+                tags: ['עיצוב ממיר', 'חוויית משתמש', 'קריאה לפעולה']
+            }
+        };
+
+        const articleKey = new URLSearchParams(window.location.search).get('article') || 'custom-code';
+        const selectedArticle = articleContent[articleKey] || articleContent['custom-code'];
+        const tagIds = ['article-tag-one', 'article-tag-two', 'article-tag-three'];
+
+        document.title = `Sland - ${selectedArticle.title}`;
+        document.getElementById('article-page-title').textContent = selectedArticle.title;
+        document.getElementById('article-image').src = selectedArticle.image;
+        document.getElementById('article-image').alt = selectedArticle.alt;
+        document.getElementById('article-title').textContent = selectedArticle.title;
+        document.getElementById('article-intro').textContent = selectedArticle.intro;
+        document.getElementById('article-quote').textContent = selectedArticle.quote;
+        document.getElementById('article-author').textContent = selectedArticle.author;
+        document.getElementById('article-role').textContent = selectedArticle.role;
+        document.getElementById('article-author-image').src = selectedArticle.authorImage;
+        document.getElementById('article-author-image').alt = selectedArticle.authorAlt;
+        document.getElementById('article-author-card-name').textContent = selectedArticle.authorAlt;
+        document.getElementById('article-author-bio').textContent = selectedArticle.authorBio;
+        document.getElementById('article-body').textContent = selectedArticle.body;
+        tagIds.forEach((tagId, index) => {
+            document.getElementById(tagId).textContent = selectedArticle.tags[index];
+        });
+    </script>
 
 </body>
 
