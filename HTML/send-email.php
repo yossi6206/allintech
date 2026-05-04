@@ -66,7 +66,11 @@ $notifyResult = sendResend($RESEND_API_KEY, [
 
 if (!$notifyResult['ok']) {
     http_response_code(500);
-    echo json_encode(['error' => 'notify_failed', 'details' => $notifyResult['body']]);
+    echo json_encode([
+        'error'   => 'notify_failed',
+        'details' => $notifyResult['body'],
+        'hint'    => 'Check Resend API key and sender domain'
+    ]);
     exit;
 }
 
