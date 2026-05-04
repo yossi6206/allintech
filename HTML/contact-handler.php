@@ -49,7 +49,7 @@ function sendResend($apiKey, $payload) {
 
 // 1. מייל אליך עם כל פרטי הפנייה
 $notifyResult = sendResend($RESEND_API_KEY, [
-    'from'     => 'AllinTech Contact <onboarding@resend.dev>',
+    'from'     => 'AllinTech Contact <info@allintech.co.il>',
     'to'       => [$TO_EMAIL],
     'reply_to' => $email,
     'subject'  => 'פנייה חדשה מהאתר – ' . $name,
@@ -76,7 +76,7 @@ if (!$notifyResult['ok']) {
 
 // 2. מייל חוזר ללקוח
 sendResend($RESEND_API_KEY, [
-    'from'    => 'Yossi | AllinTech <onboarding@resend.dev>',
+    'from'    => 'Yossi | AllinTech <info@allintech.co.il>',
     'to'      => [$email],
     'subject' => 'קיבלנו את פנייתך – AllinTech',
     'html'    =>
