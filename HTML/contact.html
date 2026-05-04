@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!--====== Title ======-->
+    <title>Sland - תבנית HTML || צור קשר</title>
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!--====== Polin Font ======-->
+    <style>
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Hairline.otf') format('opentype'); font-weight: 50; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Thin.otf') format('opentype'); font-weight: 100; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Extralight.otf') format('opentype'); font-weight: 200; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Semibold.otf') format('opentype'); font-weight: 600; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Extrabold.otf') format('opentype'); font-weight: 800; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Black.otf') format('opentype'); font-weight: 900; font-style: normal; }
+    </style>
+    <!--====== Font Awesome ======-->
+    <link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css">
+    <!--====== Flaticon CSS ======-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.3.min.css">
+    <!--====== Magnific Popup ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--====== Slick Slider ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!--====== Nice Select ======-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--====== Padding Margin ======-->
+    <link rel="stylesheet" href="assets/css/spacing.min.css">
+    <!--====== Menu css ======-->
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <!--====== Main css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        body, * { font-family: 'Polin', sans-serif !important; }
+        .fa, .fas, .far, .fal, .fad, [class^="fa-"], [class*=" fa-"] { font-family: "Font Awesome 5 Free" !important; }
+        .fab { font-family: "Font Awesome 5 Brands" !important; }
+        [class^="flaticon-"], [class*=" flaticon-"] { font-family: "flaticon" !important; }
+        body {
+            direction: rtl;
+            text-align: right;
+        }
+        .navigation > li > a,
+        .navigation li a {
+            text-align: right;
+        }
+        .navigation ul {
+            right: 0;
+            left: auto;
+        }
+        .menu-right {
+            margin-right: auto;
+            margin-left: 0 !important;
+        }
+        .contact-info-item {
+            direction: rtl;
+            text-align: right;
+        }
+        .contact-info-item i {
+            margin-left: 15px;
+            margin-right: 0;
+        }
+        .list-style-two li::before,
+        .list-style-three li::before {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+        .list-style-three li i {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+        .breadcrumb-item + .breadcrumb-item::before {
+            padding-right: 0;
+            padding-left: 0.5rem;
+        }
+        .footer-widget {
+            text-align: right;
+        }
+        .theme-btn i,
+        .read-more i {
+            transform: scaleX(-1);
+            display: inline-block;
+        }
+        .newsletter-form .newsletter-email {
+            direction: rtl;
+        }
+        .newsletter-email button {
+            border-radius: 5px 0 0 5px;
+            right: auto !important;
+            left: 10px !important;
+        }
+        .newsletter-email button i {
+            transform: scaleX(-1);
+            display: inline-block;
+        }
+        .newsletter-email input {
+            border-radius: 0 5px 5px 0;
+            padding-right: 30px !important;
+            padding-left: 160px !important;
+        }
+        .social-style-one {
+            direction: ltr;
+            text-align: right;
+        }
+        .copyright-area p {
+            direction: rtl;
+        }
+        .nav-search form {
+            right: 0;
+            left: auto;
+        }
+        select#language {
+            margin-right: 15px;
+            margin-left: 0;
+        }
+        .contact-content-area {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        @media (min-width: 1200px) {
+            .contact-content-area {
+                margin-left: 2rem;
+            }
+        }
+        /* Header RTL layout fix */
+        .header-inner {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+        }
+        .logo-outer {
+            flex-shrink: 0;
+        }
+        .nav-outer {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            margin: 0 20px;
+        }
+        .menu-right {
+            flex-shrink: 0;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+    </style>
+</head>
+
+<body class="inner-page">
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+
+        <!--====== Header Part Start ======-->
+        <header class="main-header">
+
+            
+            <!--Header-Upper-->
+            <div class="header-upper bg-white">
+                <div class="container clearfix">
+                    <div class="header-inner py-20 border-bottom-0">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index3.html"><img src="assets/images/logos/logo.png" alt="לוגו"></a></div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header">
+                                    <div class="logo-mobile"><a href="index3.html"><img src="assets/images/logos/logo.png" alt="לוגו"></a></div>
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="main-menu">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix" id="main-menu">
+                                    <ul class="navigation clearfix">
+                                        <li class="dropdown"><a href="#">בית</a>
+                                            <ul>
+                                                <li><a href="index.html">בית אחד</a></li>
+                                                <li><a href="index2.html">בית שניים</a></li>
+                                                <li><a href="index3.html">בית שלוש</a></li>
+                                                <li><a href="index3dark.html">בית 3 כהה</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">אודות</a></li>
+                                        <li class="dropdown"><a href="#">פרויקטים</a>
+                                            <ul>
+                                                <li><a href="projects.html">פרויקטים</a></li>
+                                                <li><a href="project-details.html">פרטי פרויקט</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">בלוג</a>
+                                            <ul>
+                                                <li><a href="blog.html">בלוג כללי</a></li>
+                                                <li><a href="blog-details.html">פרטי פוסט</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">דפים</a>
+                                            <ul>
+                                                <li><a href="single-service.html">שירות בודד</a></li>
+                                                <li><a href="team-details.html">פרופיל צוות</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="current"><a href="contact.html">צור קשר</a></li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+
+                        <div class="menu-right d-none d-lg-flex align-items-center ml-lg-auto">
+                           <!-- Menu Search Box-->
+                            <div class="nav-search">
+                                <button class="fa fa-search"></button>
+                                <form action="#" class="hide">
+                                    <input type="text" placeholder="חיפוש" class="searchbox" required="">
+                                    <button type="submit" class="searchbutton fa fa-search"></button>
+                                </form>
+                            </div>
+                            
+                            <!-- Language Changer-->
+                            <select name="language" id="language">
+                                <option value="Hebrew">עברית</option>
+                                <option value="English">English</option>
+                                <option value="Arabic">العربية</option>
+                            </select>
+                            <a href="contact.html" class="theme-btn style-two">התחל עכשיו <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+        </header>
+        <!--====== Header Part End ======-->
+
+
+        <!--====== Page Banner Start ======-->
+        <section class="page-banner bg-blue rel z-1" style="background-image: url(assets/images/background/banner-bg.png);">
+            <div class="container">
+                <div class="banner-inner">
+                    <h1 class="page-title wow fadeInUp delay-0-2s">צור קשר</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                            <li class="breadcrumb-item"><a href="index.html">בית</a></li>
+                            <li class="breadcrumb-item active">צור קשר</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <img class="dots-shape" src="assets/images/shapes/white-dots-two.png" alt="צורה">
+            <img class="tringle-shape slideLeftRight" src="assets/images/shapes/white-tringle.png" alt="צורה">
+            <img class="close-shape" src="assets/images/shapes/white-close.png" alt="צורה">
+            <img src="assets/images/newsletter/circle.png" alt="צורה" class="banner-circle slideUpRight">
+            <img class="dots-shape-three slideUpDown delay-1-5s" src="assets/images/shapes/white-dots-three.png" alt="צורה">
+        </section>
+        <!--====== Page Banner End ======-->
+
+
+       <!--====== Contact Us Start ======-->
+        <section class="contact-page-section pt-130 rpt-100 pb-150 rpb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact-content-area mr-xl-5 rmb-35 wow fadeInRight delay-0-2s">
+                            <div class="section-title mb-15">
+                                <span class="sub-title">בואו נדבר</span>
+                                <h2>רוצה אתר שמביא תוצאות? מתחילים בשיחה אחת</h2>
+                            </div>
+                            <p>שלח לי הודעה ואחזור אליך עם הצעה ברורה. אני בונה אתרים בקוד בלבד — מהירים, מדויקים וממירים — וכל פרויקט מתחיל בהבנת מה שאתה באמת צריך.</p>
+                            <div class="row pt-25">
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <div class="contact-info-content">
+                                            <h5>כתובת אימייל</h5>
+                                            <span><a href="mailto:info@allintech.co.il">info@allintech.co.il</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-phone"></i>
+                                        <div class="contact-info-content">
+                                            <h5>מספר טלפון</h5>
+                                            <span><a href="tel:050-000-0000">050-000-0000</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-globe"></i>
+                                        <div class="contact-info-content">
+                                            <h5>אתר אינטרנט</h5>
+                                            <span><a href="creativedesign.net" target="_blank">creativedesign.net</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div class="contact-info-content">
+                                            <h5>מיקום</h5>
+                                            <span>תל אביב, ישראל</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-form-area wow fadeInLeft delay-0-2s">
+                            <div class="section-title">
+                                <span class="sub-title">שלח הודעה</span>
+                                <h2>ספר לי על הפרויקט שלך ואחזור אליך תוך 24 שעות</h2>
+                            </div>
+                            <form id="contact-page-form" class="contact-form-three pt-35" action="#" method="post">
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" id="name" name="name" class="form-control" placeholder="שם מלא" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="email" id="email" name="email" class="form-control" placeholder="כתובת אימייל" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input type="text" id="subject" name="subject" class="form-control" placeholder="נושא">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" rows="4" class="form-control" placeholder="הודעה" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-0">
+                                            <button class="theme-btn" id="submit-btn" type="submit">שלח הודעה <i class="fas fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mt-20" id="form-status" style="display:none;"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-page-map mt-80 wow fadeInUp delay-0-2s">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d136834.1519573059!2d-74.0154445224086!3d40.7260256534837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1639991650837!5m2!1sen!2sbd" height="605" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+        <!--====== Contact Us End ======-->
+        
+       
+        <!--====== Footer Section Start ======-->
+        <footer class="footer-section bg-lighter rel z-1 mt-220">
+            <div class="container">
+             
+                <div class="newsletter-inner bg-blue bgs-cover text-white rel z-3">
+                    <div class="for-adjust-spacing"></div>
+                    <div class="row align-items-center align-items-xl-start">
+                        <div class="col-lg-6">
+                            <div class="newsletter-content p-60 wow fadeInUp delay-0-2s">
+                                <div class="section-title mb-30">
+                                    <span class="sub-title">הניוזלטר שלנו</span>
+                                    <h2>הירשם לניוזלטר שלנו וקבל עדכונים שוטפים</h2>
+                                </div>
+                                <form class="newsletter-form" action="#">
+                                    <div class="newsletter-email">
+                                        <input type="email" placeholder="הזן כתובת אימייל" required>
+                                        <button type="submit">הרשמה <i class="fas fa-angle-right"></i></button>
+                                    </div>
+                                    <div class="newsletter-radios">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" class="custom-control-input" id="wekly" name="example1" checked>
+                                          <label class="custom-control-label" for="wekly">עדכונים שבועיים</label>
+                                        </div> 
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" class="custom-control-input" id="monthly" name="example1">
+                                          <label class="custom-control-label" for="monthly">עדכונים חודשיים</label>
+                                        </div> 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="newsletter-images wow fadeInUp delay-0-4s">
+                                <img src="assets/images/newsletter/newsletter.png" alt="ניוזלטר">
+                                <img src="assets/images/newsletter/circle.png" alt="צורה" class="circle slideUpRight">
+                                <img src="assets/images/newsletter/dots.png" alt="צורה" class="dots slideLeftRight">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-between">
+                    <div class="col-xl-3 col-sm-6 col-7 col-small">
+                        <div class="footer-widget about-widget">
+                            <div class="footer-logo mb-20">
+                                <a href="index3.html"><img src="assets/images/logos/logo.png" alt="לוגו"></a>
+                            </div>
+                            <p>אנחנו מחויבים לספק פתרונות דיגיטליים מתקדמים ושירות מקצועי ואיכותי לכל לקוחותינו.</p>
+                            <a href="about.html" class="read-more">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-sm-4 col-5 col-small">
+                        <div class="footer-widget link-widget">
+                            <h4 class="footer-title">אודות</h4>
+                            <ul class="list-style-two">
+                                <li><a href="projects.html">היסטוריית הצלחה</a></li>
+                                <li><a href="team-details.html">הכר את הצוות</a></li>
+                                <li><a href="blog.html">חדשות אחרונות</a></li>
+                                <li><a href="contact.html">מחפש קריירה?</a></li>
+                                <li><a href="single-service.html">שירות פופולרי</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-8">
+                        <div class="footer-widget link-widget">
+                            <h4 class="footer-title">קישורים מהירים</h4>
+                            <ul class="list-style-two two-column">
+                                <li><a href="single-service.html">פתרונות תוכנה</a></li>
+                                <li><a href="single-service.html">ניתוח שוק</a></li>
+                                <li><a href="single-service.html">פיתוח אתרים</a></li>
+                                <li><a href="single-service.html">פתרונות דיגיטליים</a></li>
+                                <li><a href="single-service.html">עיצוב גרפי</a></li>
+                                <li><a href="single-service.html">ייעוץ עסקי</a></li>
+                                <li><a href="single-service.html">עיצוב אפליקציות</a></li>
+                                <li><a href="single-service.html">אחוז הצלחה</a></li>
+                                <li><a href="single-service.html">קידום אתרים SEO</a></li>
+                                <li><a href="single-service.html">מחקר משתמשים</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-4">
+                        <div class="footer-widget contact-widget">
+                            <h4 class="footer-title">צור קשר</h4>
+                            <ul class="list-style-three">
+                                <li><i class="fas fa-map-marker-alt"></i> תל אביב, ישראל</li>
+                                <li><i class="fas fa-envelope-open"></i> <a href="mailto:info@allintech.co.il">info@allintech.co.il</a></li>
+                                <li><i class="fas fa-phone"></i> טלפון: <a href="tel:050-000-0000">050-000-0000</a></li>
+                            </ul>
+                            <div class="social-style-one mt-25">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-area text-center">
+                    <p>© 2022 <a href="index.html">Sland.</a> כל הזכויות שמורות</p>
+                </div>
+            </div>
+            <img class="dots-shape" src="assets/images/shapes/dots.png" alt="צורה">
+            <img class="tringle-shape" src="assets/images/shapes/tringle-two.png" alt="צורה">
+            <img class="close-shape" src="assets/images/shapes/close.png" alt="צורה">
+            <img class="circle-shape" src="assets/images/shapes/circle-two.png" alt="צורה">
+            <div class="left-circles"></div>
+            <div class="right-circles"></div>
+        </footer>
+        <!--====== Footer Section End ======-->
+
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Scroll Top Button -->
+    <button class="scroll-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></button>
+
+
+    <!--====== Jquery ======-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!--====== Bootstrap ======-->
+    <script src="assets/js/bootstrap.4.5.3.min.js"></script>
+    <!--====== Appear js ======-->
+    <script src="assets/js/appear.js"></script>
+    <!--====== WOW js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--====== Isotope ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--====== Circle Progress ======-->
+    <script src="assets/js/circle-progress.min.js"></script>
+    <!--====== Image loaded ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!--====== Nice Select ======-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--====== Magnific ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--====== Slick Slider ======-->
+    <script src="assets/js/slick.min.js"></script>
+    <!--====== Main JS ======-->
+    <script src="assets/js/script.js"></script>
+
+    <!--====== Contact Form - Resend API ======-->
+    <script>
+    (function () {
+        var TO_EMAIL = 'info@allintech.co.il';
+
+        var form   = document.getElementById('contact-page-form');
+        var btn    = document.getElementById('submit-btn');
+        var status = document.getElementById('form-status');
+
+        function showStatus(ok, msg) {
+            status.style.display = 'block';
+            status.style.padding = '12px 16px';
+            status.style.borderRadius = '6px';
+            status.style.fontWeight = '600';
+            status.style.fontSize = '15px';
+            status.style.marginTop = '10px';
+            if (ok) {
+                status.style.background = '#e6f9f0';
+                status.style.color = '#1a7a4a';
+                status.style.border = '1px solid #a3d9b8';
+            } else {
+                status.style.background = '#fff0f0';
+                status.style.color = '#c0392b';
+                status.style.border = '1px solid #f5b7b1';
+            }
+            status.textContent = msg;
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var name    = document.getElementById('name').value.trim();
+            var email   = document.getElementById('email').value.trim();
+            var website = document.getElementById('website') ? document.getElementById('website').value.trim() : '';
+            var message = document.getElementById('message').value.trim();
+
+            btn.disabled = true;
+            btn.innerHTML = 'שולח... <i class="fas fa-spinner fa-spin"></i>';
+            status.style.display = 'none';
+
+            fetch('send-email.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: name, email: email, website: website, message: message })
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data.success) {
+                    showStatus(true, '✓ ההודעה נשלחה בהצלחה! נחזור אליך בהקדם.');
+                    form.reset();
+                } else {
+                    console.error('Server error:', data);
+                    showStatus(false, 'שגיאה בשליחה – אנא נסה שוב או שלח ישירות ל-' + TO_EMAIL);
+                }
+            })
+            .catch(function (err) {
+                console.error('Form error:', err);
+                showStatus(false, 'שגיאה בשליחה – אנא נסה שוב או שלח ישירות ל-' + TO_EMAIL);
+            })
+            .finally(function () {
+                btn.disabled = false;
+                btn.innerHTML = 'שלח הודעה <i class="fas fa-arrow-right"></i>';
+            });
+        });
+    })();
+    </script>
+
+</body>
+
+</html>

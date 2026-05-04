@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Sland - HTML Template</title>
+
+    <!-- Style CSS -->
+    <link href="css/collection.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet"
+        type="text/css">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-boxed sidebar-dark">
+        <ul class="nav sidenav dropable">
+            <li><a href="#getting_started" title="Getting Started">Getting Started</a></li>
+            <li><a href="#head_css_structure" title="HEAD CSS Structure">CSS Structure</a></li>
+            <li><a href="#javascript_structure" title="Javascript Structure">Javascript Structure</a></li>
+            <li><a href="#html_structure" title="HTML Structure">HTML Structure</a></li>
+            <li><a href="#fonts_used" title="Fonts used">Fonts Used</a></li>
+            <li><a href="#color-change-option" title="Main Color Change Option">Main Color Change</a></li>
+            <li><a href="#slider-edit" title="Owl Carousel Edit Option">Slick Edit Option</a></li>
+            <li><a href="#scroll-animation" title="How to Hide Scroll Animation">Scroll Animation</a></li>
+            <li><a href="#preloader-hide" title="How to edit/off Preloader">Preloader</a></li>
+            <li><a href="#speed-optimization" title="Speed Optimization">Speed Optimization</a></li>
+        </ul>
+    </aside>
+    <!-- END Sidebar -->
+
+    <header class="site-header navbar-transparent">
+        <!-- Banner -->
+        <div class="banner auto-size" style="background-color: #5138ee">
+            <div class="container-fluid">
+                <h1 style="margin: 0; padding: 30px 0;"><strong>Sland</strong> Documentation</h1>
+            </div>
+        </div>
+        <!-- END Banner -->
+    </header>
+
+    <main class="container-fluid">
+        <!-- Main content -->
+        <article class="main-content" role="main">
+
+
+            <section id="getting_started">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Getting Started</h3>
+                </div>
+                <p>The template folder <strong>Sland</strong> is available inside the downloaded zip file. Need to
+                    unzip the zip file to find the template also the documentation folder.</p>
+                <p>The <strong>files and folders structure</strong> is similar to the following:</p>
+                <ol>
+                    <li><strong>assets/css</strong> — folder with CSS files.</li>
+                    <li><strong>assets/fonts</strong> — folder with fonts files.</li>
+                    <li><strong>assets/images</strong> — folder with image files.</li>
+                    <li><strong>assets/js</strong> — folder with Javascript files.</li>
+                </ol>
+                <p>Upload the template files to the server with the help of one of the FTP-clients like FileZilla.</p>
+
+
+
+
+
+                <h6 style="margin-top: 20px;"><strong>Files Edit & Upload:</strong></h6>
+                <p>Individual pages can be customized by opening in a code editor such as VS Code. Once all the
+                    customization completed then to make the website live you need to upload the updated project files
+                    to the hosting server for your own domain. The files can be uploaded using FTP client such as
+                    FileZilla.</p>
+            </section>
+
+            <section id="head_css_structure">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">HEAD CSS Structure</h3>
+                </div>
+                <p>Followings are the <strong>css</strong> files which loaded inside the <strong>Head Section</strong>:
+                </p>
+                <pre class="line-numbers">
+<code class="language-markup">
+&lt;!--====== Font Awesome ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css"&gt;
+&lt;!--====== Flaticon CSS ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/flaticon.css"&gt;
+&lt;!--====== Bootstrap css ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/bootstrap.4.5.3.min.css"&gt;
+&lt;!--====== Magnific Popup ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/magnific-popup.css"&gt;
+&lt;!--====== Slick Slider ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/slick.css"&gt;
+&lt;!--====== Animate CSS ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/animate.min.css"&gt;
+&lt;!--====== Nice Select ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/nice-select.css"&gt;
+&lt;!--====== Padding Margin ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/spacing.min.css"&gt;
+&lt;!--====== Menu css ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/menu.css"&gt;
+&lt;!--====== Main css ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/style.css"&gt;
+&lt;!--====== Responsive css ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/responsive.css"&gt;
+</code>
+</pre>
+            </section>
+
+            <section id="javascript_structure">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Javascript Structure</h3>
+                </div>
+                <p>Followings are the <strong>JS</strong> files which loaded before the end of <strong>HEAD or BODY
+                        Section:</strong>.</p>
+                <pre class="line-numbers">
+<code class="language-markup">
+&lt;!--====== Jquery ======--&gt;
+&lt;script src="assets/js/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Bootstrap ======--&gt;
+&lt;script src="assets/js/bootstrap.4.5.3.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Appear js ======--&gt;
+&lt;script src="assets/js/appear.js"&gt;&lt;/script&gt;
+&lt;!--====== WOW js ======--&gt;
+&lt;script src="assets/js/wow.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Isotope ======--&gt;
+&lt;script src="assets/js/isotope.pkgd.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Circle Progress ======--&gt;
+&lt;script src="assets/js/circle-progress.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Image loaded ======--&gt;
+&lt;script src="assets/js/imagesloaded.pkgd.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Nice Select ======--&gt;
+&lt;script src="assets/js/jquery.nice-select.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Magnific ======--&gt;
+&lt;script src="assets/js/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Slick Slider ======--&gt;
+&lt;script src="assets/js/slick.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Main JS ======--&gt;
+&lt;script src="assets/js/script.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+            </section>
+
+
+
+            <section id="html_structure">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">HTML Structure</h3>
+                </div>
+                The <Strong>Sland</Strong> is a responsive template and is based on the <strong>Bootstrap
+                    Framework</strong>. For more information you can check the <a target="_blank"
+                    href="https://getbootstrap.com/"><strong>Bootstrap CSS</strong></a>.
+                <p>The general template structure is the same throughout the template and each of the part is under a
+                    section with a section id name. Here is the <strong>general structure:</strong></p>
+                <pre class="line-numbers">
+<code class="language-markup">
+&lt;!--====== About Section Start ======--&gt;
+&lt;section class="about-section rel z-1 pt-130 rpt-100 pb-45 rpb-15"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row align-items-center"&gt;
+            &lt;div class="col-xl-7 col-lg-6"&gt;
+                &lt;div class="about-image rmb-55 wow fadeInLeft delay-0-2s"&gt;
+                    &lt;img src="assets/images/about/what-we-provide.png" alt="About"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xl-5 col-lg-6"&gt;
+                &lt;div class="about-content wow fadeInRight delay-0-2s"&gt;
+                    &lt;div class="section-title mb-25"&gt;
+                        &lt;span class="sub-title">What We Provides&lt;/span&gt;
+                        &lt;h2>User Friendly Experience For Your Attendies&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ainventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed &lt;uia consequuntur magni dolores eos qui ratione voluptatem&lt;/p&gt;
+                    &lt;ul class="list-style-one mt-30 mb-45"&gt;
+                        &lt;li&gt;30-day free trial of our premium plan&lt;/li&gt;
+                        &lt;li&gt;100% Free - No payments required&lt;/li&gt;
+                        &lt;li&gt;Lifetime Upgradate&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;a href="contact.html" class="theme-btn">Get Started &lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!--====== About Section End ======--&gt;
+</code>
+</pre>
+            </section>
+
+
+            <section id="fonts_used">
+                <div class="page-header">
+                    <h3 style="margin-top: 30px; margin-bottom: 12px;">Fonts Used</h3>
+                </div>
+                <p>
+                    Font code can be found in the &quot;<strong>style.css</strong>&quot; file path: assets/css/style.css
+                </p>
+
+                <pre class="line-numbers">
+<code class="language-css">
+// Font Family
+--base-font: 'Inter', sans-serif;
+--heading-font: 'Poppins', sans-serif;
+</code>
+</pre>
+            </section>
+
+            <section id="color-change-option">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Main Color Change Option</h3>
+                </div>
+                <p>File path: assets/css/style.css</p>
+
+                <pre class="line-numbers">
+<code class="language-css">
+// colors
+--base-color: #5b5675;
+--heading-color: #141125;
+--primary-color: #5138ee;
+--light-color: #f8f7fc;
+--yellow-color: #ffc800;
+--border-color: #edebfd;
+</code>
+</pre>
+            </section>
+
+            <section id="slider-edit">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Slick Edit Option</h3>
+                </div>
+                <p>File path: assets/js/script.js</p>
+
+                <pre class="line-numbers">
+<code class="language-css">
+// 08. Feedback Slider One
+if ($('.feedback-wrap').length) {
+    $('.feedback-wrap').slick({
+        dots: true,
+        infinite: false,
+        autoplay: true,
+        fade: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        centerMode: false,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+}  
+
+</code>
+</pre>
+                <p><strong>More Info please browser the link: <a href="https://kenwheeler.github.io/slick/"
+                            target="_blank">Slick Docs Options</a></strong></p>
+            </section>
+
+            <section id="scroll-animation">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Hide Scroll Animation</h3>
+                </div>
+                <p>Please remove or comment the below code file path: assets/js/script.js</p>
+                <pre class="line-numbers">
+<code class="language-css">
+
+// 15. WOW Animation
+if ($('.wow').length) {
+    var wow = new WOW({
+        boxClass: 'wow', // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: false, // trigger animations on mobile devices (default is true)
+        live: true // act on asynchronously loaded content (default is true)
+    });
+    wow.init();
+}
+
+</code>
+</pre>
+                </section>
+
+				<section id="preloader-hide">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">How to edit/off Preloader</h3>
+                    </div>
+                    <p>Please remove or comment the below code file path: assets/js/script.js</p>
+<pre class="line-numbers">
+<code class="language-css">
+// 16. Preloader
+function handlePreloader() {
+    if ($('.preloader').length) {
+        $('.preloader').delay(200).fadeOut(500);
+    }
+}
+handlePreloader();
+</code>
+</pre>
+
+                <p>Also, please remove or comment the above code all HTML files</p>
+                <pre class="line-numbers">
+<code class="language-css">
+&lt;!-- Preloader --&gt;
+&lt;div class="preloader"&gt;&lt;/div&gt;
+</code>
+</pre>
+            </section>
+
+            <section id="speed-optimization">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Speed Optimization</h3>
+                </div>
+
+                <p>Please optimize all images KB, MB also, use the image size following by placeholder file path:
+                    assets/images/..</p>
+                <p>- <a href="https://tinypng.com/" target="_blank">Tinypng</a></p>
+
+                <p>Please minify all CSS file path: assets/css/..</p>
+                <p>- <a href="https://cssminifier.com/" target="_blank">CSS Minifier</a></p>
+
+
+                <p>Please minify all JS file path: assets/js/..</p>
+                <p>- <a href="https://javascript-minifier.com/" target="_blank">Javascript Minifier</a></p>
+            </section>
+
+            <section id="how-to-change-image">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Change Image?</h3>
+                </div>
+
+                <p>Please go to the image file 'path: assets/images/...' replace the image which one you want following
+                    placeholder image size & name</p>
+            </section>
+
+            <section id="how-to-change-images">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Add New Updates of Existing Template</h3>
+                </div>
+
+                <p>
+                    After a certain time, we will update our project based on the latest technology but in your
+                    template, you need to update on your own if you want.
+                </p>
+            </section>
+
+            <section id="credits">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Credits</h3>
+                </div>
+                <p><strong>Note:</strong> All <strong>images</strong> are used for <strong>preview</strong> purpose only
+                    and <strong>not included</strong> in the <strong>final purchase</strong> files.</p>
+                <p> <strong>Images from:</strong><br />
+                    <a target="_blank" href="https://www.freepik.com/">https://www.freepik.com/</a><br />
+                    <a target="_blank" href="https://pixabay.com/">https://pixabay.com/</a><br />
+                    <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a><br />
+                </p>
+                <p>
+                    <strong>Fonts:</strong><br />
+                    <a target="_blank" href="https://fonts.google.com/specimen/Inter?query=Inter">Inter</a><br>
+                    <a target="_blank" href="https://fonts.google.com/specimen/Poppins?query=popp">Poppins</a>
+                </p>
+                <p>
+                    <strong>IconFont</strong><br>
+                    <a href="https://fontawesome.com/" target="_blank">Fontawesome</a><br>
+                    <a href="https://www.flaticon.com" target="_blank">Flaticon</a><br>
+                </p>
+            </section>
+
+
+        </article>
+        <!-- END Main content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-fluid"> <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+
+                </div>
+                <div class="col-md-6 col-sm-6">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+
+
+    <!-- Scripts -->
+    <script src="js/other.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

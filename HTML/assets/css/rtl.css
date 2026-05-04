@@ -1,0 +1,419 @@
+/* ===================================================
+   RTL - Hebrew overrides for Sland Template
+   =================================================== */
+
+html, body {
+    direction: rtl;
+    text-align: right;
+}
+
+body,
+input, textarea, select,
+.form-group label,
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    font-family: 'Rubik', 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.services-tab .nav .nav-link,
+.project-info-item,
+.footer-title {
+    font-family: 'Rubik', 'Poppins', sans-serif;
+}
+
+/* ---- Header / Navigation ---- */
+.main-menu .navbar-collapse {
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+.main-menu .navigation > li {
+    float: right;
+}
+
+.main-menu .navigation > li > a {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.main-menu .navigation > li > a:after {
+    left: auto;
+    right: 0;
+}
+
+.main-menu .navigation li ul {
+    left: auto;
+    right: 0;
+}
+
+.main-menu .navigation li ul li ul {
+    left: auto;
+    right: 100%;
+}
+
+.main-menu .navigation li.dropdown .dropdown-btn {
+    margin-left: 0;
+    margin-right: 7px;
+}
+
+.menu-right {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+
+.nav-search {
+    padding-right: 0;
+    padding-left: 30px;
+    border-right: none;
+    border-left: 2px solid var(--border-color);
+}
+
+.nav-search form {
+    right: auto;
+    left: 0;
+}
+
+.nav-search form button {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 1px solid #dedede;
+}
+
+.menu-right .nice-select {
+    margin-left: 30px;
+    margin-right: 0;
+}
+
+/* ---- Buttons ---- */
+.theme-btn i,
+a.theme-btn i {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.learn-more i {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.read-more i {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+/* ---- Lists ---- */
+.list-style-one li {
+    text-align: right;
+}
+
+.list-style-one li:before {
+    margin: 5px 0 0 12px;
+}
+
+.list-style-two a:before {
+    left: auto;
+    right: 0;
+    content: "\f060";
+}
+
+.list-style-two a:hover {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.list-style-three li i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* ---- Social ---- */
+.social-style-one a {
+    margin: 0 0 5px 10px;
+}
+
+.social-style-one a:last-child {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* ---- Hero ---- */
+.hero-btns .theme-btn:first-child {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* ---- Features ---- */
+.feature-item > i {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+.feature-images {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* ---- Solutions tab nav ---- */
+.solutions-tab-nav .nav-link {
+    text-align: right;
+}
+
+.solutions-tab-nav .nav-link > i {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* ---- Counter ---- */
+.count-text {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.success-item:before {
+    left: auto;
+    right: -7.5px;
+}
+
+.success-item:after {
+    left: auto;
+    right: 0;
+}
+
+/* ---- Newsletter ---- */
+.newsletter-content {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.newsletter-email button {
+    right: auto;
+    left: 10px;
+}
+
+.newsletter-radios .custom-radio:not(:last-child) {
+    margin-right: 0;
+    margin-left: 35px;
+}
+
+.newsletter-radios .custom-radio {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.newsletter-radios .custom-radio label:before {
+    left: auto;
+    right: -40px;
+}
+
+.newsletter-radios .custom-radio label:after {
+    left: auto;
+    right: -33px;
+}
+
+/* ---- Feedback ---- */
+.feedback-author i {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+/* ---- Blog ---- */
+.blog-author {
+    left: auto;
+    right: 30px;
+}
+
+.blog-author img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.blog-meta li:not(:last-child) {
+    margin-right: 0;
+    margin-left: 18px;
+}
+
+.blog-meta li i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.blog-standard-item .blog-meta li {
+    margin-right: 0;
+    margin-left: 25px;
+    padding-right: 0;
+    padding-left: 25px;
+    border-right: none;
+    border-left: 3px solid var(--border-color);
+}
+
+/* ---- Footer ---- */
+.call-to-action-btns .theme-btn:not(:last-child) {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* ---- Widgets ---- */
+.widget-title:after {
+    left: auto;
+    right: 0;
+}
+
+.news-widget-item img {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.category-widget li:before {
+    margin-right: 0;
+    margin-left: 10px;
+    content: "\f104";
+}
+
+.category-widget li span {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.file-download li a i {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.tag-clouds a {
+    margin: 0 0 10px 10px;
+}
+
+/* ---- Blog footer ---- */
+.blog-footer .tags b,
+.blog-footer .social b {
+    margin: 10px 0 10px 15px;
+}
+
+.blog-footer .tags a {
+    margin: 5px 0 5px 10px;
+}
+
+.blog-footer .social a:not(:last-child) {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* ---- Comments ---- */
+.author-image {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.comment-item.child-comment {
+    margin-left: 0;
+    margin-right: 80px;
+}
+
+.comment-details .name-date h4 {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.comment-details .reply i {
+    margin: 5px 5px 0 0;
+}
+
+/* ---- Contact ---- */
+.contact-info-item > i {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* ---- Project ---- */
+.project-info-title:after {
+    left: auto;
+    right: 0;
+}
+
+/* ---- Breadcrumb ---- */
+.breadcrumb-item + .breadcrumb-item::before {
+    float: right;
+    margin: 0 0 0 10px;
+    content: "\f104";
+}
+
+/* ---- Scroll Top ---- */
+.scroll-top {
+    right: auto;
+    left: 25px;
+}
+
+/* ---- Shapes (flip horizontal positions) ---- */
+.dots-shape {
+    left: auto;
+    right: 6%;
+}
+
+.tringle-shape {
+    left: auto;
+    right: 3%;
+}
+
+/* ---- Header shapes ---- */
+.header-left-shape {
+    left: auto;
+    right: 15%;
+}
+
+.header-right-shape {
+    right: auto;
+    left: 15%;
+}
+
+/* ---- Nice Select RTL ---- */
+.nice-select .list {
+    left: 0;
+    right: auto;
+}
+
+/* ---- Service item icon ---- */
+.service-item > i {
+    margin: 0 0 20px 20px;
+}
+
+/* ---- Slider arrows ---- */
+.slider-arrow-btns button:first-child {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* ---- Admin comment social ---- */
+.admin-comment .social a {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* ---- Mobile menu RTL ---- */
+@media only screen and (max-width: 991px) {
+    .main-menu .navigation li.dropdown .dropdown-btn {
+        right: auto;
+        left: 10px;
+    }
+
+    .main-menu .navigation li.dropdown li.dropdown .dropdown-btn {
+        right: auto;
+        left: 20px;
+    }
+
+    .main-menu .navigation {
+        text-align: right;
+    }
+}
+
+/* ---- Header three ---- */
+.header-three .main-menu .navbar-collapse {
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+.header-three .menu-right .login i {
+    margin-left: 0;
+    margin-right: 5px;
+}
