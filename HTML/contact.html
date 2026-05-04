@@ -562,7 +562,7 @@
             btn.innerHTML = 'שולח... <i class="fas fa-spinner fa-spin"></i>';
             status.style.display = 'none';
 
-            fetch('send-email.php', {
+            fetch('contact-handler.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name: name, email: email, website: website, message: message })
