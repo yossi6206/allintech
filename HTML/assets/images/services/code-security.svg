@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="770" height="460" viewBox="0 0 770 460" role="img" aria-labelledby="title desc">
+  <title id="title">Code security service</title>
+  <desc id="desc">Illustration of a secure code shield and protected application window.</desc>
+  <rect width="770" height="460" rx="34" fill="#f2fbf7"/>
+  <circle cx="150" cy="116" r="80" fill="#00b894" opacity=".15"/>
+  <circle cx="638" cy="344" r="90" fill="#55efc4" opacity=".18"/>
+  <rect x="98" y="96" width="574" height="284" rx="28" fill="#162033"/>
+  <rect x="132" y="142" width="250" height="18" rx="9" fill="#74b9ff"/>
+  <rect x="132" y="192" width="188" height="16" rx="8" fill="#ffffff" opacity=".38"/>
+  <rect x="132" y="232" width="256" height="16" rx="8" fill="#ffffff" opacity=".25"/>
+  <rect x="132" y="272" width="218" height="16" rx="8" fill="#fdcb6e"/>
+  <path d="M515 138l92 34v80c0 62-40 102-92 126-52-24-92-64-92-126v-80z" fill="#00b894"/>
+  <path d="M515 168l58 22v58c0 38-24 64-58 82-34-18-58-44-58-82v-58z" fill="#ffffff" opacity=".18"/>
+  <rect x="484" y="230" width="62" height="58" rx="12" fill="#fff"/>
+  <path d="M498 230v-18c0-20 14-34 34-34s34 14 34 34v18" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="515" cy="258" r="8" fill="#00b894"/>
+  <path d="M515 266v16" stroke="#00b894" stroke-width="7" stroke-linecap="round"/>
+</svg>

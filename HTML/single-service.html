@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!--====== Title ======-->
-    <title>Sland - תבנית HTML || שירות בודד</title>
+    <title>Sland - תבנית HTML || שירותי קוד</title>
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <!--====== Polin Font ======-->
@@ -52,6 +52,16 @@
         .copyright-area { direction: rtl; }
         .pricing-item { text-align: right; direction: rtl; }
         .call-action-widget { text-align: center; }
+        .code-article-card { background: #fff; border-radius: 18px; box-shadow: 0 15px 45px rgba(20, 31, 54, 0.08); overflow: hidden; height: 100%; }
+        .code-article-card img { width: 100%; display: block; }
+        .code-article-card .content { padding: 28px; }
+        .code-article-card .tag { display: inline-block; color: #3763eb; font-weight: 700; margin-bottom: 10px; }
+        .code-article-card h3 { margin-bottom: 15px; }
+        .code-article-card p { margin-bottom: 18px; }
+        .code-card-link { display: block; height: 100%; color: inherit; }
+        .code-card-link:hover { color: inherit; }
+        .code-card-link .code-article-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .code-card-link:hover .code-article-card { transform: translateY(-6px); box-shadow: 0 20px 55px rgba(20, 31, 54, 0.14); }
     </style>
     <!--====== Font Awesome ======-->
     <link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css">
@@ -185,11 +195,11 @@
         <section class="page-banner bg-blue rel z-1" style="background-image: url(assets/images/background/banner-bg.png);">
             <div class="container">
                 <div class="banner-inner">
-                    <h1 class="page-title wow fadeInUp delay-0-2s">שירות בודד</h1>
+                    <h1 class="page-title wow fadeInUp delay-0-2s">שירותי קוד</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb wow fadeInUp delay-0-4s">
                             <li class="breadcrumb-item"><a href="index.html">בית</a></li>
-                            <li class="breadcrumb-item active">שירות בודד</li>
+                            <li class="breadcrumb-item active">שירותי קוד</li>
                         </ol>
                     </nav>
                 </div>
@@ -211,12 +221,12 @@
                         <div class="service-sidebar rmb-75">
                             <div class="service-widget service-list wow fadeInUp delay-0-2s">
                                 <ul>
-                                    <li class="active"><a href="single-service.html">אופטימיזציה למנועי חיפוש <i class="fas fa-angle-left"></i></a></li>
-                                    <li><a href="single-service.html">פיתוח אתרים <i class="fas fa-angle-left"></i></a></li>
-                                    <li><a href="single-service.html">ניתוח עסקי <i class="fas fa-angle-left"></i></a></li>
-                                    <li><a href="single-service.html">מחקר מילות מפתח <i class="fas fa-angle-left"></i></a></li>
-                                    <li><a href="single-service.html">שיווק ברשתות חברתיות <i class="fas fa-angle-left"></i></a></li>
-                                    <li><a href="single-service.html">דיווח וניתוח <i class="fas fa-angle-left"></i></a></li>
+                                    <li class="active"><a href="service-details.html#frontend">פיתוח Frontend <i class="fas fa-angle-left"></i></a></li>
+                                    <li><a href="service-details.html#backend">פיתוח Backend ו-API <i class="fas fa-angle-left"></i></a></li>
+                                    <li><a href="service-details.html#automation">אוטומציה ובדיקות <i class="fas fa-angle-left"></i></a></li>
+                                    <li><a href="service-details.html#review">סקירת קוד <i class="fas fa-angle-left"></i></a></li>
+                                    <li><a href="service-details.html#security">אבטחת קוד <i class="fas fa-angle-left"></i></a></li>
+                                    <li><a href="service-details.html#devops">DevOps ופריסה <i class="fas fa-angle-left"></i></a></li>
                                 </ul>
                             </div>
                             <div class="service-widget call-action-widget wow fadeInUp delay-0-2s">
@@ -249,39 +259,119 @@
                     <div class="col-xl-8 col-lg-7">
                         <div class="single-service-content">
                             <div class="image mb-40 wow fadeInUp delay-0-4s">
-                                <img src="assets/images/services/single-service.jpg" alt="Service">
+                                <img src="assets/images/services/frontend-code.svg" alt="שירותי פיתוח קוד">
                             </div>
-                            <h2>עיצוב ופיתוח ממשק SAAS</h2>
-                            <p>פלטפורמת allintech המאפשרת לעסקים לנהל את הפעילות הדיגיטלית שלהם בצורה חכמה ויעילה. הפתרון שלנו מספק כלים מתקדמים לניתוח נתונים, ניהול לקוחות ואופטימיזציה של תהליכים עסקיים. אנו מאמינים שהטכנולוגיה צריכה לשרת את האדם, ולכן פיתחנו ממשק אינטואיטיבי שמקל על השימוש היומיומי. הצוות שלנו מורכב ממומחים בפיתוח תוכנה, עיצוב UX ואסטרטגיה עסקית. אנו מלווים את לקוחותינו לאורך כל הדרך ומבטיחים תמיכה מקצועית ומהירה בכל שלב.</p>
+                            <h2>שירותי פיתוח קוד ומאמרים מקצועיים</h2>
+                            <p>כאן תמצאו כמה שירותים בודדים לעולם הקוד: פיתוח ממשקים, בניית שרתים ו-API, אוטומציה, בדיקות ושיפור איכות קוד. כל שירות מוצג כמו מאמר קצר שמסביר מה מקבלים, למי זה מתאים ואיך הוא עוזר להפוך רעיון למוצר דיגיטלי יציב, מהיר וברור יותר.</p>
                             <div class="row mt-55">
                                 <div class="col-xl-4 col-sm-6">
                                     <div class="service-item-two wow fadeInUp delay-0-2s">
                                         <i class="flaticon-data-analysis"></i>
-                                        <h3><a href="single-service.html">ניתוח בזמן אמת</a></h3>
-                                        <p>מעקב וניתוח נתונים בזמן אמת לקבלת תובנות עסקיות מדויקות ומיידיות</p>
+                                        <h3><a href="single-service.html">תכנון ארכיטקטורה</a></h3>
+                                        <p>מבנה קוד מסודר שמקל על פיתוח, תחזוקה והוספת פיצ'רים חדשים</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-sm-6">
                                     <div class="service-item-two wow fadeInUp delay-0-4s">
                                         <i class="flaticon-monitoring"></i>
-                                        <h3><a href="single-service.html">תאימות למדיה</a></h3>
-                                        <p>הפלטפורמה מותאמת לכל סוגי המדיה והמכשירים לחוויה אופטימלית</p>
+                                        <h3><a href="single-service.html">קוד רספונסיבי</a></h3>
+                                        <p>ממשקים שמתאימים למסכים שונים ושומרים על חוויית משתמש נקייה</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-sm-6">
                                     <div class="service-item-two wow fadeInUp delay-0-6s">
                                         <i class="flaticon-fast-delivery"></i>
-                                        <h3><a href="single-service.html">מהיר ואינטואיטיבי</a></h3>
-                                        <p>ממשק מהיר ואינטואיטיבי שמאפשר ניהול יעיל ונוח של כל המשימות</p>
+                                        <h3><a href="single-service.html">מסירה מהירה</a></h3>
+                                        <p>פיתוח ממוקד עם שלבים ברורים, בדיקות ושיפור ביצועים לפני עליה לאוויר</p>
                                     </div>
                                 </div>
                             </div>
-                            <h2>סיכום השירות</h2>
-                            <p>הפתרון שלנו מתאים לעסקים בכל הגדלים המחפשים לשדרג את הנוכחות הדיגיטלית שלהם. אנו מספקים שירות מקצה לקצה הכולל תכנון, פיתוח, הטמעה ותמיכה שוטפת. הניסיון המצטבר שלנו בתחום מבטיח תוצאות מוכחות ושביעות רצון מלאה של הלקוחות.</p>
+                            <div class="row mt-40">
+                                <div class="col-md-6 mb-30">
+                                    <a class="code-card-link" href="service-details.html#frontend">
+                                        <article class="code-article-card wow fadeInUp delay-0-2s">
+                                            <img src="assets/images/services/frontend-code.svg" alt="איור פיתוח Frontend">
+                                            <div class="content">
+                                                <span class="tag">מאמר שירות 01</span>
+                                                <h3>פיתוח Frontend מודרני</h3>
+                                                <p>שירות זה מתאים לעסקים שרוצים אתר או מערכת Web עם עיצוב נקי, טעינה מהירה וקוד שקל להמשיך לפתח. אנחנו בונים רכיבים, עמודים ואינטראקציות שמרגישים טבעיים למשתמש.</p>
+                                                <span class="read-more">קראו את השירות המלא <i class="fas fa-arrow-left"></i></span>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <a class="code-card-link" href="service-details.html#backend">
+                                        <article class="code-article-card wow fadeInUp delay-0-4s">
+                                            <img src="assets/images/services/backend-api.svg" alt="איור פיתוח Backend ו-API">
+                                            <div class="content">
+                                                <span class="tag">מאמר שירות 02</span>
+                                                <h3>בניית Backend ו-API</h3>
+                                                <p>מאחורי כל מוצר טוב יש שכבת שרת יציבה. השירות כולל תכנון מסדי נתונים, נקודות API, הרשאות, שמירת מידע וחיבור בין המערכת לבין שירותים חיצוניים.</p>
+                                                <span class="read-more">קראו את השירות המלא <i class="fas fa-arrow-left"></i></span>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <a class="code-card-link" href="service-details.html#automation">
+                                        <article class="code-article-card wow fadeInUp delay-0-2s">
+                                            <img src="assets/images/services/automation-tests.svg" alt="איור אוטומציה ובדיקות קוד">
+                                            <div class="content">
+                                                <span class="tag">מאמר שירות 03</span>
+                                                <h3>אוטומציה ובדיקות קוד</h3>
+                                                <p>בדיקות אוטומטיות, תהליכי Build ופריסה מסודרת עוזרים לצמצם תקלות ולשחרר גרסאות בביטחון. השירות מתאים במיוחד למוצרים שגדלים במהירות.</p>
+                                                <span class="read-more">קראו את השירות המלא <i class="fas fa-arrow-left"></i></span>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <a class="code-card-link" href="service-details.html#review">
+                                        <article class="code-article-card wow fadeInUp delay-0-4s">
+                                            <img src="assets/images/services/code-review.svg" alt="איור סקירת קוד ושיפור ביצועים">
+                                            <div class="content">
+                                                <span class="tag">מאמר שירות 04</span>
+                                                <h3>סקירת קוד ושיפור ביצועים</h3>
+                                                <p>נבדוק את הקוד הקיים, נזהה צווארי בקבוק, כפילויות ובעיות תחזוקה, ונציע שיפורים ממוקדים שמשפרים מהירות, קריאות ואמינות.</p>
+                                                <span class="read-more">קראו את השירות המלא <i class="fas fa-arrow-left"></i></span>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <a class="code-card-link" href="service-details.html#security">
+                                        <article class="code-article-card wow fadeInUp delay-0-2s">
+                                            <img src="assets/images/services/code-security.svg" alt="איור אבטחת קוד">
+                                            <div class="content">
+                                                <span class="tag">מאמר שירות 05</span>
+                                                <h3>אבטחת קוד</h3>
+                                                <p>נבדוק הרשאות, טפסים, קלט משתמשים ונקודות רגישות בקוד כדי לצמצם סיכוני אבטחה ולבנות בסיס בטוח יותר למוצר.</p>
+                                                <span class="read-more">קראו את השירות המלא <i class="fas fa-arrow-left"></i></span>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <a class="code-card-link" href="service-details.html#devops">
+                                        <article class="code-article-card wow fadeInUp delay-0-4s">
+                                            <img src="assets/images/services/devops-deploy.svg" alt="איור DevOps ופריסה">
+                                            <div class="content">
+                                                <span class="tag">מאמר שירות 06</span>
+                                                <h3>DevOps ופריסה</h3>
+                                                <p>נבנה תהליך מסודר להעלאת גרסאות, סביבות עבודה, בדיקות לפני פריסה וניטור בסיסי אחרי שהמוצר עולה לאוויר.</p>
+                                                <span class="read-more">קראו את השירות המלא <i class="fas fa-arrow-left"></i></span>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                            </div>
+                            <h2>מה כולל כל שירות?</h2>
+                            <p>כל שירות מתחיל באפיון קצר, ממשיך לתכנון טכני ברור ומסתיים בקוד מוכן לשימוש עם הסבר על אופן התחזוקה. המטרה היא לא רק לבנות, אלא להשאיר אתכם עם מוצר שאפשר להבין, להרחיב ולנהל לאורך זמן.</p>
                             <ul class="list-style-one">
-                                <li>ניסיון חינם של 30 יום בתוכנית הפרימיום</li>
-                                <li>100% חינם - ללא צורך בתשלום</li>
-                                <li>שדרוגים לכל החיים</li>
+                                <li>פיתוח קוד נקי ומותאם לצרכי העסק</li>
+                                <li>תיעוד קצר וברור לכל רכיב חשוב</li>
+                                <li>בדיקות, שיפור ביצועים והכנה לעליה לאוויר</li>
                             </ul>
                         </div>
                     </div>

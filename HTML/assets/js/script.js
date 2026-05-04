@@ -147,7 +147,7 @@
         if ($('.feedback-wrap').length) {
             $('.feedback-wrap').slick({
                 dots: true,
-                infinite: false,
+                infinite: true,
                 autoplay: true,
                 fade: true,
                 autoplaySpeed: 5000,
@@ -156,6 +156,8 @@
                 speed: 1000,
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                rtl: true,
+                pauseOnDotsHover: true,
             });
         }
         

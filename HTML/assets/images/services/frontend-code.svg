@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="770" height="460" viewBox="0 0 770 460" role="img" aria-labelledby="title desc">
+  <title id="title">Frontend code service</title>
+  <desc id="desc">Illustration of a browser window with code blocks and UI cards.</desc>
+  <rect width="770" height="460" rx="34" fill="#f2f6ff"/>
+  <circle cx="640" cy="86" r="62" fill="#ffdf6b" opacity=".7"/>
+  <circle cx="128" cy="370" r="92" fill="#6c5ce7" opacity=".12"/>
+  <rect x="72" y="70" width="626" height="320" rx="24" fill="#151c2c"/>
+  <rect x="72" y="70" width="626" height="58" rx="24" fill="#26304a"/>
+  <circle cx="112" cy="99" r="8" fill="#ff6b6b"/>
+  <circle cx="140" cy="99" r="8" fill="#ffd166"/>
+  <circle cx="168" cy="99" r="8" fill="#06d6a0"/>
+  <rect x="112" y="158" width="250" height="28" rx="8" fill="#6c5ce7"/>
+  <rect x="112" y="208" width="190" height="16" rx="8" fill="#8fa2ff"/>
+  <rect x="112" y="240" width="225" height="16" rx="8" fill="#8fa2ff" opacity=".75"/>
+  <rect x="112" y="272" width="170" height="16" rx="8" fill="#8fa2ff" opacity=".55"/>
+  <rect x="422" y="158" width="206" height="168" rx="18" fill="#ffffff"/>
+  <rect x="448" y="188" width="154" height="16" rx="8" fill="#dfe7ff"/>
+  <rect x="448" y="222" width="108" height="16" rx="8" fill="#6c5ce7"/>
+  <rect x="448" y="258" width="132" height="42" rx="12" fill="#06d6a0" opacity=".85"/>
+</svg>
