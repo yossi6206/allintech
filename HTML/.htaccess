@@ -1,0 +1,7 @@
+DirectoryIndex index3.html index.html index.php
+
+RewriteEngine On
+RewriteCond %{THE_REQUEST} /index3\.html [NC]
+RewriteRule ^index3\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
