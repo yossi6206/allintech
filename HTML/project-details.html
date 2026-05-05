@@ -1,19 +1,55 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="he" dir="rtl">
 
 <head>
     <!--====== Required meta tags ======-->
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
+    <meta name="description" content="פרטי פרויקט - SLand" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!--====== Title ======-->
-    <title>Sland - HTML Template || Project Details</title>
+    <title>Sland - תבנית HTML || פרטי פרויקט</title>
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <!--====== Google Fonts ======-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--====== Polin Font ======-->
+    <style>
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Hairline.otf') format('opentype'); font-weight: 50; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Thin.otf') format('opentype'); font-weight: 100; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Extralight.otf') format('opentype'); font-weight: 200; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Semibold.otf') format('opentype'); font-weight: 600; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Extrabold.otf') format('opentype'); font-weight: 800; font-style: normal; }
+        @font-face { font-family: 'Polin'; src: url('assets/fonts/polin/Polin-Black.otf') format('opentype'); font-weight: 900; font-style: normal; }
+        body, * { font-family: 'Polin', sans-serif !important; }
+        .fa, .fas, .far, .fal, .fad, [class^="fa-"], [class*=" fa-"] { font-family: "Font Awesome 5 Free" !important; }
+        .fab { font-family: "Font Awesome 5 Brands" !important; }
+        [class^="flaticon-"], [class*=" flaticon-"] { font-family: "flaticon" !important; }
+        .main-menu .navigation > li > a,
+        .theme-btn, .footer-title, h1, h2, h3, h4, h5, p, a, li, span, label, input, button, select { direction: rtl; text-align: right; }
+        .breadcrumb { flex-direction: row-reverse; justify-content: flex-start; }
+        .banner-inner { text-align: right; }
+        .menu-right { margin-right: auto !important; margin-left: 0 !important; }
+        .footer-widget { text-align: right; }
+        .list-style-one li, .list-style-two li, .list-style-three li { text-align: right; direction: rtl; }
+        .list-style-two li::before, .list-style-three li::before { right: 0; left: auto; }
+        .two-column { direction: rtl; }
+        .social-style-one { text-align: right; }
+        .newsletter-radios { direction: rtl; }
+        .nav-search form { right: 0 !important; left: auto !important; }
+        .nav-search form button.searchbutton { right: auto !important; left: 0 !important; }
+        .nav-search .searchbox { direction: rtl !important; text-align: right !important; padding-right: 15px !important; padding-left: 55px !important; }
+        .nice-select { direction: rtl; padding-right: 18px; padding-left: 30px; text-align: right; }
+        .nice-select:after { right: auto; left: 12px; }
+        .nice-select .list { direction: rtl; text-align: right; right: 0; left: auto; }
+        .copyright-area { direction: rtl; }
+        .project-details-content { direction: rtl; text-align: right; }
+        .project-content-one, .project-content-two { direction: rtl; text-align: right; }
+        .project-information, .project-info-item { direction: rtl; text-align: right; }
+    </style>
     <!--====== Font Awesome ======-->
     <link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css">
     <!--====== Flaticon CSS ======-->
@@ -36,10 +72,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <style>
-        .breadcrumb { flex-direction: row-reverse; justify-content: flex-start; }
-        .banner-inner { text-align: right; }
-    </style>
 
 </head>
 
@@ -54,7 +86,7 @@
             <!--Header-Top-->
             <div class="header-top text-center text-white bg-blue py-5">
                 <div class="container rel z-1">
-                    <p>Welcome to SLand a Modern Saaslanding Template</p>
+                    <p>ברוכים הבאים ל-SLand - תבנית דף נחיתה מודרנית לסאאס</p>
                     <img class="header-left-shape" src="assets/images/shapes/header-top-left.png" alt="shape">
                     <img class="header-right-shape slideLeftRight infinite" src="assets/images/shapes/header-top-right.png" alt="shape">
                 </div>
@@ -83,34 +115,27 @@
 
                                 <div class="navbar-collapse collapse clearfix" id="main-menu">
                                     <ul class="navigation clearfix">
-                                        <li class="dropdown"><a href="#">home</a>
+                                        <li><a href="index.html">בית</a></li>
+                                        <li><a href="about.html">אודות</a></li>
+                                        <li class="dropdown current"><a href="#">פרויקטים</a>
                                             <ul>
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index2.html">Home Two</a></li>
-                                                <li><a href="index3.html">Home Three</a></li>
-                                                <li><a href="index3dark.html">Home 3 Dark</a></li>
+                                                <li><a href="projects.html">פרויקטים</a></li>
+                                                <li><a href="project-details.html">פרטי פרויקט</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">about</a></li>
-                                        <li class="dropdown current"><a href="#">project</a>
+                                        <li class="dropdown"><a href="#">בלוג</a>
                                             <ul>
-                                                <li><a href="projects.html">Projects</a></li>
-                                                <li><a href="project-details.html">Project details</a></li>
+                                                <li><a href="blog.html">בלוג רגיל</a></li>
+                                                <li><a href="blog-details.html">פרטי בלוג</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a href="#">blog</a>
+                                        <li class="dropdown"><a href="#">דפים</a>
                                             <ul>
-                                                <li><a href="blog.html">blog standard</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
+                                                <li><a href="single-service.html">שירות בודד</a></li>
+                                                <li><a href="team-details.html">פרופיל צוות</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a href="#">pages</a>
-                                            <ul>
-                                                <li><a href="single-service.html">service single</a></li>
-                                                <li><a href="team-details.html">Team Profile</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="contact.html">צור קשר</a></li>
                                     </ul>
                                 </div>
 
@@ -123,18 +148,18 @@
                             <div class="nav-search">
                                 <button class="fa fa-search"></button>
                                 <form action="#" class="hide">
-                                    <input type="text" placeholder="Search" class="searchbox" required="">
+                                    <input type="text" placeholder="חיפוש" class="searchbox" required="">
                                     <button type="submit" class="searchbutton fa fa-search"></button>
                                 </form>
                             </div>
                             
                             <!-- Language Changer-->
                             <select name="language" id="language">
-                                <option value="English">English</option>
-                                <option value="Bengali">Bengali</option>
-                                <option value="Arabic">Arabic</option>
+                                <option value="Hebrew">עברית</option>
+                                <option value="English">אנגלית</option>
+                                <option value="Arabic">ערבית</option>
                             </select>
-                            <a href="contact.html" class="theme-btn style-two">Get Started <i class="fas fa-arrow-right"></i></a>
+                            <a href="contact.html" class="theme-btn style-two">התחל עכשיו <i class="fas fa-arrow-left"></i></a>
                         </div>
 
                     </div>
@@ -150,11 +175,11 @@
         <section class="page-banner bg-blue rel z-1" style="background-image: url(assets/images/background/banner-bg.png);">
             <div class="container">
                 <div class="banner-inner">
-                    <h1 class="page-title wow fadeInUp delay-0-2s">Project Details</h1>
+                    <h1 class="page-title wow fadeInUp delay-0-2s">פרטי פרויקט</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb wow fadeInUp delay-0-4s">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">Project Details</li>
+                            <li class="breadcrumb-item"><a href="index.html">בית</a></li>
+                            <li class="breadcrumb-item active">פרטי פרויקט</li>
                         </ol>
                     </nav>
                 </div>
@@ -173,33 +198,33 @@
             <div class="container">
                 <div class="project-details-content">
                     <div class="image mb-55 wow fadeInUp delay-0-2s">
-                        <img src="assets/images/projects/project-details.jpg" alt="Project Single">
+                        <img src="assets/images/projects/project-details.jpg" alt="פרויקט בודד">
                     </div>
                     <div class="row pb-30">
                         <div class="col-lg-8">
-                            <div class="project-content-one mr-xl-5 wow fadeInUp delay-0-2s">
-                                <h2>Web Design & Development Solutions</h2>
-                                <p class="big-letter">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <br>But I must explain to you how this mistaken idea of denouncing pleasure and praising pain was born and will give you a complete account of the system, and expound the actual teachings of the great explorer of the master-build er of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses</p>
+                            <div class="project-content-one ml-xl-5 wow fadeInUp delay-0-2s">
+                                <h2>פתרונות עיצוב ופיתוח אתרים</h2>
+                                <p class="big-letter">הדף הזה מציג דוגמה לפרויקט מלא: אפיון חוויית משתמש, עיצוב ממשקים והטמעה בקוד. אנחנו מתחילים מהבנת הצרכים, בונים היררכיית מסכים ברורה ומוודאים שהאתר נראה ומרגיש טוב בכל מכשיר. <br>בשלב הפיתוח שומרים על קוד קריא, רכיבים לשימוש חוזר ובדיקות לפני עלייה לאוויר. המטרה היא מוצר דיגיטלי מהיר, נגיש וקל לתחזוקה — עם דגש על תוכן ברור ויחס אנושי למבקרים. בפרויקטים דומים אנו מתאימים את העיצוב לשפת המותג, מגדירים מדדי הצלחה ומלווים את הלקוח עד לתוצאה יציבה לאורך זמן.</p>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="project-information bg-blue text-white mb-50 mr-xl-5 wow fadeInDown delay-0-2s">
-                                <h3 class="project-info-title">Project Info</h3>
+                                <h3 class="project-info-title">מידע על הפרויקט</h3>
                                 <div class="project-info-item">
-                                    <span>Category</span>
-                                    <h4>Web Design</h4>
+                                    <span>קטגוריה</span>
+                                    <h4>עיצוב אתרים</h4>
                                 </div>
                                 <div class="project-info-item">
-                                    <span>Clients</span>
-                                    <h4>Somalia D. Silva</h4>
+                                    <span>לקוח</span>
+                                    <h4>דנה כהן</h4>
                                 </div>
                                 <div class="project-info-item">
-                                    <span>Date</span>
-                                    <h4>25 March 2022</h4>
+                                    <span>תאריך</span>
+                                    <h4>25 במרץ 2022</h4>
                                 </div>
                                 <div class="project-info-item">
-                                    <span>Address</span>
-                                    <h4>75 Main Street, USA</h4>
+                                    <span>כתובת</span>
+                                    <h4>רחוב ראשי 75, תל אביב</h4>
                                 </div>
                             </div>
                         </div>
@@ -207,23 +232,23 @@
                     <div class="row pb-10">
                         <div class="col-lg-4 col-md-6">
                             <div class="image mb-30 wow fadeInUp delay-0-2s">
-                                <img src="assets/images/projects/project-middle-1.jpg" alt="Project">
+                                <img src="assets/images/projects/project-middle-1.jpg" alt="פרויקט">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="image mb-30 wow fadeInUp delay-0-4s">
-                                <img src="assets/images/projects/project-middle-2.jpg" alt="Project">
+                                <img src="assets/images/projects/project-middle-2.jpg" alt="פרויקט">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="image mb-30 wow fadeInUp delay-0-6s">
-                                <img src="assets/images/projects/project-middle-3.jpg" alt="Project">
+                                <img src="assets/images/projects/project-middle-3.jpg" alt="פרויקט">
                             </div>
                         </div>
                     </div>
                     <div class="project-content-two wow fadeInUp delay-0-2s">
-                        <h2>Projects Summery</h2>
-                        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains</p>
+                        <h2>סיכום הפרויקט</h2>
+                        <p>בחלקים האחרונים של הפרויקט ריכזנו את הלמידה מהעבודה השוטפת: מה עבד טוב אצל המשתמשים, אילו מסכים דרשו כיוונון ואיך ניתן להרחיב את המערכת בעתיד. שקיפות מול הלקוח, סדר בבעלות על התכנים והחלטות מוצר מבוססות נתונים הם חלק מרכזי מההצלחה. בסיום מוודאים שמסמכי ההעברה ברורים, שתחזוקה שוטפת אפשרית ושיש בסיס טכני שמאפשר להוסיף יכולות חדשות בלי לשבור את מה שכבר עובד. כך נשמרים איכות, מהירות ובטחון בשימוש ארוך טווח.</p>
                     </div>
                 </div>
             </div>
@@ -241,22 +266,22 @@
                         <div class="col-lg-6">
                             <div class="newsletter-content p-60 wow fadeInUp delay-0-2s">
                                 <div class="section-title mb-30">
-                                    <span class="sub-title">Our Newsletter</span>
-                                    <h2>Subscribe Our Newsletter to Get More Updates</h2>
+                                    <span class="sub-title">הניוזלטר שלנו</span>
+                                    <h2>הירשמו לניוזלטר שלנו לעדכונים נוספים</h2>
                                 </div>
                                 <form class="newsletter-form" action="#">
                                     <div class="newsletter-email">
-                                        <input type="email" placeholder="Enter Email Address" required>
-                                        <button type="submit">Sign up <i class="fas fa-angle-right"></i></button>
+                                        <input type="email" placeholder="הכנס כתובת אימייל" required>
+                                        <button type="submit">הרשמה <i class="fas fa-angle-left"></i></button>
                                     </div>
                                     <div class="newsletter-radios">
                                         <div class="custom-control custom-radio">
                                           <input type="radio" class="custom-control-input" id="wekly" name="example1" checked>
-                                          <label class="custom-control-label" for="wekly">Wekly Updates</label>
+                                          <label class="custom-control-label" for="wekly">עדכונים שבועיים</label>
                                         </div> 
                                         <div class="custom-control custom-radio">
                                           <input type="radio" class="custom-control-input" id="monthly" name="example1">
-                                          <label class="custom-control-label" for="monthly">Monthly Updates</label>
+                                          <label class="custom-control-label" for="monthly">עדכונים חודשיים</label>
                                         </div> 
                                     </div>
                                 </form>
@@ -278,46 +303,46 @@
                             <div class="footer-logo mb-20">
                                 <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
                             </div>
-                            <p>Sed perspiciatis unde omnis istee sit voluptatem accusante doloreue <b>laudantium</b> aperiam eaque abillo inventore</p>
-                            <a href="about.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <p>פלטפורמת allintech מודרנית לניהול עסקי חכם ויעיל. <b>הפתרון המושלם</b> לעסק שלך</p>
+                            <a href="about.html" class="read-more">קרא עוד <i class="fas fa-arrow-left"></i></a>
                         </div>
                     </div>
                     <div class="col-xl-2 col-sm-4 col-5 col-small">
                         <div class="footer-widget link-widget">
-                            <h4 class="footer-title">About</h4>
+                            <h4 class="footer-title">אודות</h4>
                             <ul class="list-style-two">
-                                <li><a href="projects.html">Success History</a></li>
-                                <li><a href="team-details.html">Meet The Team</a></li>
-                                <li><a href="blog.html">Latest News</a></li>
-                                <li><a href="contact.html">Need a Career?</a></li>
-                                <li><a href="single-service.html">Popular Service</a></li>
+                                <li><a href="projects.html">היסטוריית הצלחות</a></li>
+                                <li><a href="team-details.html">הכירו את הצוות</a></li>
+                                <li><a href="blog.html">חדשות אחרונות</a></li>
+                                <li><a href="contact.html">קריירה</a></li>
+                                <li><a href="single-service.html">שירות פופולרי</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-8">
                         <div class="footer-widget link-widget">
-                            <h4 class="footer-title">Quick Links</h4>
+                            <h4 class="footer-title">קישורים מהירים</h4>
                             <ul class="list-style-two two-column">
-                                <li><a href="single-service.html">Software Solutions</a></li>
-                                <li><a href="single-service.html">Market Analysis</a></li>
-                                <li><a href="single-service.html">Web Development</a></li>
-                                <li><a href="single-service.html">Digital Solutions</a></li>
-                                <li><a href="single-service.html">Graphics Design</a></li>
-                                <li><a href="single-service.html">Consultations</a></li>
-                                <li><a href="single-service.html">Application Design</a></li>
-                                <li><a href="single-service.html">Success Rate</a></li>
-                                <li><a href="single-service.html">SEO Optimization</a></li>
-                                <li><a href="single-service.html">User Research</a></li>
+                                <li><a href="single-service.html">פתרונות תוכנה</a></li>
+                                <li><a href="single-service.html">ניתוח שוק</a></li>
+                                <li><a href="single-service.html">פיתוח אתרים</a></li>
+                                <li><a href="single-service.html">פתרונות דיגיטליים</a></li>
+                                <li><a href="single-service.html">עיצוב גרפי</a></li>
+                                <li><a href="single-service.html">ייעוץ</a></li>
+                                <li><a href="single-service.html">עיצוב אפליקציות</a></li>
+                                <li><a href="single-service.html">שיעור הצלחה</a></li>
+                                <li><a href="single-service.html">קידום אתרים</a></li>
+                                <li><a href="single-service.html">מחקר משתמשים</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-4">
                         <div class="footer-widget contact-widget">
-                            <h4 class="footer-title">Get in Touch</h4>
+                            <h4 class="footer-title">צרו קשר</h4>
                             <ul class="list-style-three">
-                                <li><i class="fas fa-map-marker-alt"></i> 55 Main Street, New York</li>
+                                <li><i class="fas fa-map-marker-alt"></i> רחוב ראשי 55, תל אביב</li>
                                 <li><i class="fas fa-envelope-open"></i> <a href="mailto:support@gmail.com">support@gmail.com</a></li>
-                                <li><i class="fas fa-phone"></i> Call : <a href="callto:+012(345)678">+012 (345) 678</a></li>
+                                <li><i class="fas fa-phone"></i> טלפון: <a href="callto:+012(345)678">+012 (345) 678</a></li>
                             </ul>
                             <div class="social-style-one mt-25">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -329,7 +354,7 @@
                     </div>
                 </div>
                 <div class="copyright-area text-center">
-                    <p>© 2022 <a href="index.html">Sland.</a> All rights reserved</p>
+                    <p>© 2022 <a href="index.html">Sland.</a> כל הזכויות שמורות</p>
                 </div>
             </div>
             <img class="dots-shape" src="assets/images/shapes/dots.png" alt="Shape">

@@ -232,6 +232,8 @@
 .menu-right .theme-btn {
     padding-top: 8px;
     padding-bottom: 8px;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 /*Nav Search*/
