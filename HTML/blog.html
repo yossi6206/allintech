@@ -73,6 +73,83 @@
         .newsletter-radios .custom-control-input:checked ~ .custom-control-label::after {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%234e46dc'/%3e%3c/svg%3e");
         }
+        .blog-standard-item.is-hidden { display: none; }
+        .blog-standard-item[data-href] { cursor: pointer; }
+        .blog-standard-item > img {
+            width: 100%;
+            aspect-ratio: 840 / 519;
+            object-fit: cover;
+            border-radius: 10px;
+            background: #f4f6ff;
+        }
+        /* News widget - fix oversized images */
+        .news-widget-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            overflow: hidden;
+        }
+        .news-widget-item img {
+            width: 80px !important;
+            height: 70px !important;
+            min-width: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0 !important;
+            flex-shrink: 0;
+        }
+        .news-widget-item .content {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+        }
+        .news-widget-item .content h5 {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 4px;
+            white-space: normal;
+            word-break: break-word;
+        }
+        .news-widget-item .content .date {
+            font-size: 12px;
+        }
+        .blog-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+            direction: rtl;
+        }
+        .blog-pagination button {
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            border: 1px solid #e6e8f5;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #1f2040;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 1;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        .blog-pagination button.active,
+        .blog-pagination button:hover:not(:disabled) {
+            color: #ffffff;
+            border-color: #4e46dc;
+            background: #4e46dc;
+        }
+        .blog-pagination button:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
     </style>
     <!--====== Font Awesome ======-->
     <link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css">
@@ -107,28 +184,19 @@
         <!--====== Header Part Start ======-->
         <header class="main-header">
 
-            <!--Header-Top-->
-            <div class="header-top text-center text-white bg-blue py-5">
-                <div class="container rel z-1">
-                    <p>ברוכים הבאים ל-SLand - תבנית נחיתה מודרנית ל-allintech</p>
-                    <img class="header-left-shape" src="assets/images/shapes/header-top-left.png" alt="shape">
-                    <img class="header-right-shape slideLeftRight infinite" src="assets/images/shapes/header-top-right.png" alt="shape">
-                </div>
-            </div>
-            
             <!--Header-Upper-->
             <div class="header-upper bg-white">
                 <div class="container clearfix">
                     <div class="header-inner py-20 border-bottom-0">
                         <div class="logo-outer">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
+                            <div class="logo"><a href="index3.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
                         </div>
 
                         <div class="nav-outer clearfix">
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-lg">
                                 <div class="navbar-header">
-                                    <div class="logo-mobile"><a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
+                                    <div class="logo-mobile"><a href="index3.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
                                     <!-- Toggle Button -->
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="main-menu">
                                         <span class="icon-bar"></span>
@@ -140,24 +208,8 @@
                                 <div class="navbar-collapse collapse clearfix" id="main-menu">
                                     <ul class="navigation clearfix">
                                         <li><a href="contact.html">צור קשר</a></li>
-                                        <li class="dropdown"><a href="#">דפים</a>
-                                            <ul>
-                                                <li><a href="single-service.html">שירות בודד</a></li>
-                                                <li><a href="team-details.html">פרופיל צוות</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown current"><a href="#">בלוג</a>
-                                            <ul>
-                                                <li><a href="blog.html">בלוג סטנדרטי</a></li>
-                                                <li><a href="blog-details.html">פרטי בלוג</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a href="#">פרויקטים</a>
-                                            <ul>
-                                                <li><a href="projects.html">פרויקטים</a></li>
-                                                <li><a href="project-details.html">פרטי פרויקט</a></li>
-                                            </ul>
-                                        </li>
+                                        <li class="current"><a href="blog.html">בלוג</a></li>
+                                        <li><a href="projects.html">פרויקטים</a></li>
                                         <li><a href="about.html">אודות</a></li>
                                         <li><a href="index.html">דף הבית</a></li>
                                     </ul>
@@ -223,50 +275,101 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="blog-standard-wrap rmb-75">
-                            <div class="blog-standard-item wow fadeInUp delay-0-2s">
-                                <img src="assets/images/blog/blog-standard1.jpg" alt="בלוג">
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s" data-page="1" data-href="blog-details.html?article=clean-architecture">
+                                <img src="assets/images/blog/code-clean-architecture.png" alt="תמונת מאמר על ארכיטקטורת קוד נקייה">
                                 <ul class="blog-meta">
-                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></li>
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=clean-architecture">25 פברואר 2022</a></li>
                                     <li><i class="far fa-comments"></i> <a href="#">תגובות (05)</a></li>
                                     <li><i class="far fa-share-square"></i> <a href="#">שיתוף (5k)</a></li>
                                 </ul>
-                                <h2><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקי משתמש קוליים</a></h2>
-                                <p>עיצוב ממשק משתמש קולי הוא תחום מרתק המשלב טכנולוגיה עם חוויית משתמש. הבנת הצרכים והציפיות של המשתמשים היא המפתח להצלחה בתחום זה. ממשקים קוליים מאפשרים אינטראקציה טבעית ונוחה יותר עם המערכת.</p>
-                                <a href="blog-details.html" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                                <h2><a href="blog-details.html?article=clean-architecture">איך בונים ארכיטקטורת קוד נקייה שמחזיקה לאורך זמן</a></h2>
+                                <p>ארכיטקטורת קוד טובה מפרידה בין לוגיקה עסקית, תשתיות וממשקי משתמש. כשהגבולות ברורים, קל יותר להוסיף פיצ'רים, לתקן באגים ולשמור על מוצר יציב גם כשהמערכת גדלה.</p>
+                                <a href="blog-details.html?article=clean-architecture" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
                             </div>
-                            <div class="blog-standard-item wow fadeInUp delay-0-2s">
-                                <img src="assets/images/blog/blog-standard2.jpg" alt="בלוג">
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s" data-page="1" data-href="blog-details.html?article=api-development">
+                                <img src="assets/images/blog/code-api-development.png" alt="תמונת מאמר על פיתוח API">
                                 <ul class="blog-meta">
-                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></li>
-                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (05)</a></li>
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=api-development">12 מרץ 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (08)</a></li>
+                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (7k)</a></li>
+                                </ul>
+                                <h2><a href="blog-details.html?article=api-development">פיתוח API יציב: חוזים ברורים, תגובות מהירות ואינטגרציות קלות</a></h2>
+                                <p>API איכותי מתחיל במבנה נתונים צפוי, שמות עקביים וטיפול נכון בשגיאות. תכנון מוקדם של הרשאות, גרסאות ותיעוד מקצר את זמן הפיתוח ומונע תקלות בין צוותים.</p>
+                                <a href="blog-details.html?article=api-development" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s" data-page="1" data-href="blog-details.html?article=frontend-components">
+                                <img src="assets/images/blog/code-frontend-components.png" alt="תמונת מאמר על פיתוח רכיבי Frontend">
+                                <ul class="blog-meta">
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=frontend-components">28 מרץ 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (12)</a></li>
+                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (9k)</a></li>
+                                </ul>
+                                <h2><a href="blog-details.html?article=frontend-components">רכיבי Frontend חכמים שמאיצים בניית ממשקים</a></h2>
+                                <p>ספריית רכיבים מסודרת הופכת עיצוב לקוד שימושי, נגיש ועקבי. כשכל כפתור, טופס וכרטיס בנויים נכון, הצוות יכול לבנות מסכים חדשים מהר יותר בלי לוותר על איכות.</p>
+                                <a href="blog-details.html?article=frontend-components" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s is-hidden" data-page="2" data-href="blog-details.html?article=automated-tests">
+                                <img src="assets/images/blog/code-automated-tests.png" alt="תמונת מאמר על בדיקות אוטומטיות בקוד">
+                                <ul class="blog-meta">
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=automated-tests">06 אפריל 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (06)</a></li>
+                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (4k)</a></li>
+                                </ul>
+                                <h2><a href="blog-details.html?article=automated-tests">בדיקות אוטומטיות שמאפשרות לשחרר קוד בביטחון</a></h2>
+                                <p>בדיקות יחידה, אינטגרציה ו־E2E מגנות על תהליכים קריטיים ומגלות בעיות לפני הלקוח. כיסוי נכון לא נועד לבדוק כל שורה, אלא להבטיח שהמוצר ממשיך לעבוד כשמוסיפים קוד חדש.</p>
+                                <a href="blog-details.html?article=automated-tests" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s is-hidden" data-page="2" data-href="blog-details.html?article=performance">
+                                <img src="assets/images/blog/code-performance.png" alt="תמונת מאמר על שיפור ביצועי קוד">
+                                <ul class="blog-meta">
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=performance">18 אפריל 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (09)</a></li>
+                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (8k)</a></li>
+                                </ul>
+                                <h2><a href="blog-details.html?article=performance">אופטימיזציית ביצועים בקוד: פחות עומס, יותר מהירות</a></h2>
+                                <p>ביצועים טובים מתחילים במדידה: זמני טעינה, גודל חבילות, שאילתות איטיות וזיכרון. אחרי שמזהים את צוואר הבקבוק, אפשר לשפר קאשינג, טעינה עצלה ויעילות אלגוריתמית בצורה מדויקת.</p>
+                                <a href="blog-details.html?article=performance" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s is-hidden" data-page="2" data-href="blog-details.html?article=security">
+                                <img src="assets/images/blog/code-security.png" alt="תמונת מאמר על אבטחת קוד">
+                                <ul class="blog-meta">
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=security">02 מאי 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (04)</a></li>
+                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (3k)</a></li>
+                                </ul>
+                                <h2><a href="blog-details.html?article=security">אבטחת קוד כבר משלב הפיתוח: ולידציה, הרשאות וסודות</a></h2>
+                                <p>קוד מאובטח לא מתחיל בסוף הפרויקט. הוא מתחיל בבדיקת קלט, ניהול הרשאות, שמירה נכונה של מפתחות וסריקה רציפה של תלותים כדי לצמצם סיכונים לפני שהם מגיעים לפרודקשן.</p>
+                                <a href="blog-details.html?article=security" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s is-hidden" data-page="3" data-href="blog-details.html?article=devops-deploy">
+                                <img src="assets/images/blog/code-devops-deploy.png" alt="תמונת מאמר על DevOps ופריסת קוד">
+                                <ul class="blog-meta">
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=devops-deploy">15 מאי 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (11)</a></li>
+                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (6k)</a></li>
+                                </ul>
+                                <h2><a href="blog-details.html?article=devops-deploy">DevOps לפרויקטי קוד: CI/CD, בדיקות ופריסה חלקה</a></h2>
+                                <p>תהליך פריסה טוב מחבר בין Git, בדיקות, בנייה וסביבות ענן. כשהצינור אוטומטי וברור, אפשר לשחרר גרסאות קטנות בתדירות גבוהה ולזהות תקלות במהירות.</p>
+                                <a href="blog-details.html?article=devops-deploy" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="blog-standard-item wow fadeInUp delay-0-2s is-hidden" data-page="3" data-href="blog-details.html?article=refactor">
+                                <img src="assets/images/blog/code-refactor.png" alt="תמונת מאמר על ריפקטורינג וקוד נקי">
+                                <ul class="blog-meta">
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=refactor">30 מאי 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (07)</a></li>
                                     <li><i class="far fa-share-square"></i> <a href="#">שיתוף (5k)</a></li>
                                 </ul>
-                                <h2><a href="blog-details.html">פריימוורקים לאינטרנט - עיצוב קישורים טובים יותר</a></h2>
-                                <p>עיצוב ממשק משתמש קולי הוא תחום מרתק המשלב טכנולוגיה עם חוויית משתמש. הבנת הצרכים והציפיות של המשתמשים היא המפתח להצלחה בתחום זה. ממשקים קוליים מאפשרים אינטראקציה טבעית ונוחה יותר עם המערכת.</p>
-                                <a href="blog-details.html" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
+                                <h2><a href="blog-details.html?article=refactor">ריפקטורינג נכון: להפוך קוד מסובך לקוד שקל לעבוד איתו</a></h2>
+                                <p>ריפקטורינג מוצלח משפר שמות, מפרק פונקציות גדולות ומסיר כפילויות בלי לשנות התנהגות. כשעושים אותו בשלבים קטנים ומגובים בבדיקות, הקוד הופך ברור יותר והתחזוקה זולה יותר.</p>
+                                <a href="blog-details.html?article=refactor" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
                             </div>
-                            <div class="blog-standard-item wow fadeInUp delay-0-2s">
-                                <img src="assets/images/blog/blog-standard3.jpg" alt="בלוג">
-                                <ul class="blog-meta">
-                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></li>
-                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (05)</a></li>
-                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (5k)</a></li>
-                                </ul>
-                                <h2><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקי משתמש קוליים</a></h2>
-                                <p>עיצוב ממשק משתמש קולי הוא תחום מרתק המשלב טכנולוגיה עם חוויית משתמש. הבנת הצרכים והציפיות של המשתמשים היא המפתח להצלחה בתחום זה. ממשקים קוליים מאפשרים אינטראקציה טבעית ונוחה יותר עם המערכת.</p>
-                                <a href="blog-details.html" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                            <div class="blog-standard-item wow fadeInUp delay-0-2s">
-                                <img src="assets/images/blog/blog-standard4.jpg" alt="בלוג">
-                                <ul class="blog-meta">
-                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></li>
-                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (05)</a></li>
-                                    <li><i class="far fa-share-square"></i> <a href="#">שיתוף (5k)</a></li>
-                                </ul>
-                                <h2><a href="blog-details.html">פריימוורקים לאינטרנט - עיצוב קישורים טובים יותר</a></h2>
-                                <p>עיצוב ממשק משתמש קולי הוא תחום מרתק המשלב טכנולוגיה עם חוויית משתמש. הבנת הצרכים והציפיות של המשתמשים היא המפתח להצלחה בתחום זה. ממשקים קוליים מאפשרים אינטראקציה טבעית ונוחה יותר עם המערכת.</p>
-                                <a href="blog-details.html" class="theme-btn">קרא עוד <i class="fas fa-arrow-right"></i></a>
-                            </div>
+                            <nav class="blog-pagination" aria-label="עימוד מאמרי הבלוג">
+                                <button type="button" class="blog-page-prev" aria-label="לעמוד הקודם"><i class="fas fa-angle-right"></i></button>
+                                <button type="button" class="blog-page-number active" data-page="1" aria-label="עמוד 1">1</button>
+                                <button type="button" class="blog-page-number" data-page="2" aria-label="עמוד 2">2</button>
+                                <button type="button" class="blog-page-number" data-page="3" aria-label="עמוד 3">3</button>
+                                <button type="button" class="blog-page-next" aria-label="לעמוד הבא"><i class="fas fa-angle-left"></i></button>
+                            </nav>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-8">
@@ -281,35 +384,35 @@
                             <div class="widget category-widget wow fadeInUp delay-0-4s">
                                <h3 class="widget-title">קטגוריות</h3>
                                 <ul>
-                                    <li><a href="blog.html">נחיתה allintech</a> <span>(2)</span></li>
-                                    <li><a href="blog.html">דפי נחיתה לאפליקציות</a> <span>(5)</span></li>
-                                    <li><a href="blog.html">פתרונות עיצוב אינטרנט</a> <span>(5)</span></li>
-                                    <li><a href="blog.html">פיתוח WordPress</a> <span>(3)</span></li>
-                                    <li><a href="blog.html">שיווק דיגיטלי</a> <span>(7)</span></li>
+                                    <li><a href="blog.html">ארכיטקטורת קוד</a> <span>(2)</span></li>
+                                    <li><a href="blog.html">פיתוח Frontend</a> <span>(1)</span></li>
+                                    <li><a href="blog.html">Backend ו-API</a> <span>(2)</span></li>
+                                    <li><a href="blog.html">בדיקות ואיכות קוד</a> <span>(2)</span></li>
+                                    <li><a href="blog.html">DevOps ואבטחה</a> <span>(2)</span></li>
                                 </ul>
                             </div>
                             <div class="widget news-widget wow fadeInUp delay-0-2s">
                                <h3 class="widget-title">חדשות אחרונות</h3>
                                 <div class="news-widget-wrap">
                                     <div class="news-widget-item">
-                                        <img src="assets/images/widgets/news1.jpg" alt="חדשות">
+                                        <img src="assets/images/blog/code-api-development.png" alt="חדשות על פיתוח API">
                                         <div class="content">
-                                            <h5><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקים</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></span>
+                                            <h5><a href="blog-details.html?article=api-development">פיתוח API יציב לאינטגרציות קלות</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=api-development">12 מרץ 2022</a></span>
                                         </div>
                                     </div>
                                     <div class="news-widget-item">
-                                        <img src="assets/images/widgets/news2.jpg" alt="חדשות">
+                                        <img src="assets/images/blog/code-security.png" alt="חדשות על אבטחת קוד">
                                         <div class="content">
-                                            <h5><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקים</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></span>
+                                            <h5><a href="blog-details.html?article=security">אבטחת קוד כבר משלב הפיתוח</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=security">02 מאי 2022</a></span>
                                         </div>
                                     </div>
                                     <div class="news-widget-item">
-                                        <img src="assets/images/widgets/news3.jpg" alt="חדשות">
+                                        <img src="assets/images/blog/code-devops-deploy.png" alt="חדשות על DevOps ופריסה">
                                         <div class="content">
-                                            <h5><a href="blog-details.html">כל מה שרצית לדעת על יצירת ממשקים</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 פברואר 2022</a></span>
+                                            <h5><a href="blog-details.html?article=devops-deploy">CI/CD ופריסה חלקה לפרויקטי קוד</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=devops-deploy">15 מאי 2022</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -327,12 +430,12 @@
                                <h3 class="widget-title">תגיות פופולריות</h3>
                                 <div class="tag-clouds">
                                     <a href="blog.html">allintech</a>
-                                    <a href="blog.html">עיצוב אינטרנט</a>
-                                    <a href="blog.html">גרפיקה</a>
-                                    <a href="blog.html">פיתוח</a>
-                                    <a href="blog.html">דפי נחיתה</a>
-                                    <a href="blog.html">UX/UI</a>
-                                    <a href="blog.html">WordPress</a>
+                                    <a href="blog.html">פיתוח קוד</a>
+                                    <a href="blog.html">Clean Code</a>
+                                    <a href="blog.html">API</a>
+                                    <a href="blog.html">Frontend</a>
+                                    <a href="blog.html">בדיקות</a>
+                                    <a href="blog.html">DevOps</a>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +491,7 @@
                     <div class="col-xl-3 col-sm-6 col-7 col-small">
                         <div class="footer-widget about-widget">
                             <div class="footer-logo mb-20">
-                                <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
+                                <a href="index3.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
                             </div>
                             <p>אנו מספקים פתרונות טכנולוגיים מתקדמים לעסקים בכל הגדלים. <b>המומחיות שלנו</b> מאפשרת לכם להתמקד בצמיחה עסקית.</p>
                             <a href="about.html" class="read-more">קרא עוד <i class="fas fa-arrow-right"></i></a>
@@ -483,6 +586,68 @@
     <script src="assets/js/slick.min.js"></script>
     <!--====== Main JS ======-->
     <script src="assets/js/script.js"></script>
+    <script>
+        (function () {
+            var currentPage = 1;
+            var posts = document.querySelectorAll('.blog-standard-item[data-page]');
+            var pageButtons = document.querySelectorAll('.blog-page-number');
+            var prevButton = document.querySelector('.blog-page-prev');
+            var nextButton = document.querySelector('.blog-page-next');
+            var totalPages = pageButtons.length;
+
+            function showPage(page) {
+                currentPage = page;
+
+                posts.forEach(function (post) {
+                    post.classList.toggle('is-hidden', post.getAttribute('data-page') !== String(page));
+                });
+
+                pageButtons.forEach(function (button) {
+                    var isActive = button.getAttribute('data-page') === String(page);
+                    button.classList.toggle('active', isActive);
+                    button.setAttribute('aria-current', isActive ? 'page' : 'false');
+                });
+
+                prevButton.disabled = page === 1;
+                nextButton.disabled = page === totalPages;
+
+                var firstVisible = document.querySelector('.blog-standard-item:not(.is-hidden)');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            pageButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    showPage(Number(button.getAttribute('data-page')));
+                });
+            });
+
+            prevButton.addEventListener('click', function () {
+                if (currentPage > 1) {
+                    showPage(currentPage - 1);
+                }
+            });
+
+            nextButton.addEventListener('click', function () {
+                if (currentPage < totalPages) {
+                    showPage(currentPage + 1);
+                }
+            });
+
+            posts.forEach(function (post) {
+                post.addEventListener('click', function (event) {
+                    if (event.target.closest('a, button')) {
+                        return;
+                    }
+
+                    window.location.href = post.getAttribute('data-href');
+                });
+            });
+
+            showPage(currentPage);
+        }());
+    </script>
 
 </body>
 

@@ -65,11 +65,26 @@
         .navigation li.dropdown > a::after,
         .navigation li.dropdown > a::before { display: none !important; content: none !important; }
         .navigation li.dropdown > a .fa-chevron-down { font-size: 10px; margin-right: 4px; opacity: 0.7; }
+        /* RTL menu order & spacing fixes */
+        @media only screen and (min-width: 992px) {
+            .nav-outer { margin-right: 36px; }
+            .main-menu .navigation > li { float: right; }
+            .main-menu .navbar-collapse { margin-left: 0; margin-right: 40px; }
+            .main-menu .navigation > li > a { margin-left: 0; margin-right: 30px; }
+            .main-menu .navigation li.dropdown .dropdown-btn { display: none; }
+        }
         /* Fix search placeholder */
         .nav-search input { direction: rtl; }
         .news-widget-item img { width: 100px; height: 100px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
         .news-widget-item { margin-bottom: 20px; gap: 14px; }
         .news-widget-item:last-child { margin-bottom: 0; }
+        .blog-standard-item > img {
+            width: 100%;
+            aspect-ratio: 840 / 519;
+            object-fit: cover;
+            border-radius: 10px;
+            background: #f4f6ff;
+        }
         .blog-footer .social { align-items: center; gap: 14px; }
         .blog-footer .social b { margin: 0; }
         .blog-footer .social a { margin: 0 !important; line-height: 1; }
@@ -107,28 +122,20 @@
         <!--====== Header Part Start ======-->
         <header class="main-header">
 
-            <!--Header-Top-->
-            <div class="header-top text-center text-white bg-blue py-5">
-                <div class="container rel z-1">
-                    <p>ברוכים הבאים ל-SLand - תבנית SAAS מודרנית ומתקדמת</p>
-                    <img class="header-left-shape" src="assets/images/shapes/header-top-left.png" alt="shape">
-                    <img class="header-right-shape slideLeftRight infinite" src="assets/images/shapes/header-top-right.png" alt="shape">
-                </div>
-            </div>
             
             <!--Header-Upper-->
             <div class="header-upper bg-white">
                 <div class="container clearfix">
                     <div class="header-inner py-20 border-bottom-0">
                         <div class="logo-outer">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
+                            <div class="logo"><a href="index3.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
                         </div>
 
                         <div class="nav-outer clearfix">
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-lg">
                                 <div class="navbar-header">
-                                    <div class="logo-mobile"><a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
+                                    <div class="logo-mobile"><a href="index3.html"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
                                     <!-- Toggle Button -->
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="main-menu">
                                         <span class="icon-bar"></span>
@@ -139,27 +146,10 @@
 
                                 <div class="navbar-collapse collapse clearfix" id="main-menu">
                                     <ul class="navigation clearfix">
-                                        <li class="dropdown"><a href="#">דף הבית <i class="fas fa-chevron-down fa-xs"></i></a>
-                                            <ul>
-                                                <li><a href="index.html">דף הבית 1</a></li>
-                                                <li><a href="index2.html">דף הבית 2</a></li>
-                                                <li><a href="index3.html">דף הבית 3</a></li>
-                                                <li><a href="index3dark.html">דף הבית 3 כהה</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="index.html">דף הבית</a></li>
                                         <li><a href="about.html">אודות</a></li>
-                                        <li class="dropdown"><a href="#">פרויקטים <i class="fas fa-chevron-down fa-xs"></i></a>
-                                            <ul>
-                                                <li><a href="projects.html">פרויקטים</a></li>
-                                                <li><a href="project-details.html">פרטי פרויקט</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown current"><a href="#">בלוג <i class="fas fa-chevron-down fa-xs"></i></a>
-                                            <ul>
-                                                <li><a href="blog.html">בלוג רשימה</a></li>
-                                                <li><a href="blog-details.html">פרטי פוסט</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="projects.html">פרויקטים</a></li>
+                                        <li class="current"><a href="blog.html">בלוג</a></li>
                                         <li class="dropdown"><a href="#">עמודים <i class="fas fa-chevron-down fa-xs"></i></a>
                                             <ul>
                                                 <li><a href="single-service.html">שירות בודד</a></li>
@@ -231,29 +221,30 @@
                     <div class="col-lg-8">
                         <div class="blog-details-content rmb-75">
                             <div class="blog-standard-item">
-                                <img id="article-image" src="assets/images/blog/custom-code-article.png" alt="פיתוח בקוד שמותאם בדיוק לעסק שלך">
+                                <img id="article-image" src="assets/images/blog/code-clean-architecture.png" alt="איך בונים ארכיטקטורת קוד נקייה שמחזיקה לאורך זמן">
                                 <ul class="blog-meta">
-                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html" id="article-date">25 מרץ 2022</a></li>
-                                    <li><i class="far fa-comments"></i> <a href="#">תגובות (05)</a></li>
-                                    <li><i class="far fa-share-square"></i> <a href="#">שיתופים (5k)</a></li>
+                                    <li><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=clean-architecture" id="article-date">25 פברואר 2022</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="#" id="article-comments">תגובות (05)</a></li>
+                                    <li><i class="far fa-share-square"></i> <a href="#" id="article-shares">שיתוף (5k)</a></li>
+                                    <li><i class="fas fa-hashtag"></i> <a href="#" id="article-id">clean-architecture</a></li>
                                 </ul>
-                                <h2 id="article-title">פיתוח בקוד שמותאם בדיוק לעסק שלך</h2>
-                                <p id="article-intro">אתר שנבנה בקוד מתחיל מהצרכים האמיתיים של העסק, ולא מהמגבלות של תבנית מוכנה. כל אזור, רכיב וכפתור מתוכננים לפי המטרה של הדף: להסביר מהר, להיראות מקצועי ולהוביל את הגולש לפעולה ברורה.</p>
+                                <h2 id="article-title">איך בונים ארכיטקטורת קוד נקייה שמחזיקה לאורך זמן</h2>
+                                <p id="article-intro">ארכיטקטורת קוד טובה מפרידה בין לוגיקה עסקית, תשתיות וממשקי משתמש. כשהגבולות ברורים, קל יותר להוסיף פיצ'רים, לתקן באגים ולשמור על מוצר יציב גם כשהמערכת גדלה.</p>
                                 <blockquote>
-                                    <p id="article-quote">כשבונים מאפס בקוד, האתר מתאים את עצמו לעסק ולא העסק מתאים את עצמו לתבנית.</p>
+                                    <p id="article-quote">קוד נקי הוא לא רק עניין של סגנון, אלא הדרך שבה הצוות שומר על מהירות, יציבות והבנה משותפת לאורך זמן.</p>
                                     <div class="name-designation">
                                         <span class="name" id="article-author">דניאל כהן,</span>
-                                        <span class="designation" id="article-role">מפתח אתרים</span>
+                                        <span class="designation" id="article-role">ארכיטקט תוכנה</span>
                                     </div>
                                 </blockquote>
-                                <p id="article-body">בפיתוח בקוד אפשר לשלוט בכל פרט: מבנה העמוד, סדר התוכן, חוויית המשתמש, התאמות מובייל וביצועים. התוצאה היא אתר מדויק יותר, קל יותר לתחזוקה, מהיר יותר לטעינה והרבה יותר נכון למותג שלך.</p>
+                                <p id="article-body">כדי לבנות מערכת שמחזיקה לאורך זמן צריך להגדיר גבולות ברורים בין שכבות, לשמור על שמות שמסבירים כוונה ולתעד החלטות משמעותיות. מבנה כזה מאפשר להחליף תשתיות, להוסיף מסכים ולתקן תקלות בלי לפתוח מחדש את כל המערכת.</p>
                                 
                                 <div class="blog-footer d-flex flex-wrap align-items-center pt-25">
                                     <div class="tags mb-10 mr-auto">
                                         <b>תגיות </b> 
-                                        <a href="blog.html" id="article-tag-one">פיתוח בקוד</a>
-                                        <a href="blog.html" id="article-tag-two">אתר מותאם אישית</a>
-                                        <a href="blog.html" id="article-tag-three">בידול עסקי</a>
+                                        <a href="blog.html" id="article-tag-one">Clean Code</a>
+                                        <a href="blog.html" id="article-tag-two">ארכיטקטורה</a>
+                                        <a href="blog.html" id="article-tag-three">תחזוקה</a>
                                     </div>
                                     <div class="social mb-10">
                                         <b>שתף: </b>
@@ -270,7 +261,7 @@
                                 </div>
                                 <div class="comment-details">
                                     <h3 id="article-author-card-name">דניאל כהן</h3>
-                                    <p id="article-author-bio">מפתח אתרים שמתמחה בבניית אתרים בקוד נקי ומותאם אישית לעסקים שרוצים אתר מדויק, מהיר וקל לתחזוקה.</p>
+                                    <p id="article-author-bio">ארכיטקט תוכנה שמלווה צוותים בבניית מערכות יציבות, מודולריות וקלות לתחזוקה.</p>
                                     <div class="social mt-15">
                                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -292,7 +283,7 @@
                                             <h4>נועה לוי</h4>
                                             <span class="date">25 פברואר 2022</span>
                                         </div>
-                                        <p>מאמר מצוין ומעניין מאוד! תוכן מקיף שמכסה את כל ההיבטים החשובים של הנושא. ממליץ בחום לכל מי שמתעניין בתחום.</p>
+                                        <p>מאמר מצוין ומעניין מאוד! תוכן מקיף שמכסה את כל ההיבטים החשובים של הנושא. ממליצה בחום לכל מי שמתעניין בתחום.</p>
                                         <a href="blog-details.html" class="reply">השב <i class="fas fa-long-arrow-alt-left"></i></a>
                                     </div>
                                 </div>
@@ -305,7 +296,7 @@
                                             <h4>איתי שרון</h4>
                                             <span class="date">25 פברואר 2022</span>
                                         </div>
-                                        <p>מסכימה לחלוטין! הנקודות שהועלו כאן רלוונטיות מאוד לעבודה היומיומית שלנו כמעצבים ומפתחים.</p>
+                                        <p>מסכים לחלוטין! הנקודות שהועלו כאן רלוונטיות מאוד לעבודה היומיומית שלנו כמעצבים ומפתחים.</p>
                                         <a href="blog-details.html" class="reply">השב <i class="fas fa-long-arrow-alt-left"></i></a>
                                     </div>
                                 </div>
@@ -383,31 +374,31 @@
                                <h3 class="widget-title">חדשות אחרונות</h3>
                                 <div class="news-widget-wrap">
                                     <div class="news-widget-item">
-                                        <img src="assets/images/blog/custom-code-article.png" alt="פיתוח בקוד שמותאם בדיוק לעסק שלך">
+                                        <img src="assets/images/blog/code-api-development.png" alt="פיתוח API יציב לאינטגרציות קלות">
                                         <div class="content">
-                                            <h5><a href="blog-details.html?article=custom-code">פיתוח בקוד שמותאם בדיוק לעסק שלך</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=custom-code">25 מרץ 2022</a></span>
+                                            <h5><a href="blog-details.html?article=api-development">פיתוח API יציב לאינטגרציות קלות</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=api-development">12 מרץ 2022</a></span>
                                         </div>
                                     </div>
                                     <div class="news-widget-item">
-                                        <img src="assets/images/blog/clean-code-performance-article.png" alt="קוד נקי שמטעין מהר וממיר יותר">
+                                        <img src="assets/images/blog/code-security.png" alt="אבטחת קוד כבר משלב הפיתוח">
                                         <div class="content">
-                                            <h5><a href="blog-details.html?article=clean-code">קוד נקי שמטעין מהר וממיר יותר</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=clean-code">25 מרץ 2022</a></span>
+                                            <h5><a href="blog-details.html?article=security">אבטחת קוד כבר משלב הפיתוח</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=security">02 מאי 2022</a></span>
                                         </div>
                                     </div>
                                     <div class="news-widget-item">
-                                        <img src="assets/images/blog/full-control-platform-article.png" alt="שליטה מלאה בלי תלות בפלטפורמות">
+                                        <img src="assets/images/blog/code-devops-deploy.png" alt="CI/CD ופריסה חלקה לפרויקטי קוד">
                                         <div class="content">
-                                            <h5><a href="blog-details.html?article=full-control">שליטה מלאה בלי תלות בפלטפורמות</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=full-control">25 מרץ 2022</a></span>
+                                            <h5><a href="blog-details.html?article=devops-deploy">CI/CD ופריסה חלקה לפרויקטי קוד</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=devops-deploy">15 מאי 2022</a></span>
                                         </div>
                                     </div>
                                     <div class="news-widget-item">
-                                        <img src="assets/images/blog/conversion-design-article.png" alt="עיצוב ופיתוח שמובילים לפעולה">
+                                        <img src="assets/images/blog/code-performance.png" alt="אופטימיזציית ביצועים בקוד">
                                         <div class="content">
-                                            <h5><a href="blog-details.html?article=conversion-design">עיצוב ופיתוח שמובילים לפעולה</a></h5>
-                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=conversion-design">25 מרץ 2022</a></span>
+                                            <h5><a href="blog-details.html?article=performance">אופטימיזציית ביצועים בקוד</a></h5>
+                                            <span class="date"><i class="far fa-calendar-alt"></i> <a href="blog-details.html?article=performance">18 אפריל 2022</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -587,76 +578,215 @@
                 title: 'פיתוח בקוד שמותאם בדיוק לעסק שלך',
                 image: 'assets/images/blog/custom-code-article.png',
                 alt: 'פיתוח בקוד שמותאם בדיוק לעסק שלך',
-                intro: 'אתר שנבנה בקוד מתחיל מהצרכים האמיתיים של העסק, ולא מהמגבלות של תבנית מוכנה. כל אזור, רכיב וכפתור מתוכננים לפי המטרה של הדף: להסביר מהר, להיראות מקצועי ולהוביל את הגולש לפעולה ברורה.',
-                quote: 'כשבונים מאפס בקוד, האתר מתאים את עצמו לעסק ולא העסק מתאים את עצמו לתבנית.',
-                author: 'דניאל כהן,',
-                role: 'מפתח אתרים',
-                authorImage: 'assets/images/blog/author-daniel.jpg',
-                authorAlt: 'דניאל כהן',
-                authorBio: 'מפתח אתרים שמתמחה בבניית אתרים בקוד נקי ומותאם אישית לעסקים שרוצים אתר מדויק, מהיר וקל לתחזוקה.',
-                body: 'בפיתוח בקוד אפשר לשלוט בכל פרט: מבנה העמוד, סדר התוכן, חוויית המשתמש, התאמות מובייל וביצועים. התוצאה היא אתר מדויק יותר, קל יותר לתחזוקה, מהיר יותר לטעינה והרבה יותר נכון למותג שלך.',
-                tags: ['פיתוח בקוד', 'אתר מותאם אישית', 'בידול עסקי']
+                date: '25 מרץ 2022',
+                comments: 'תגובות (5)',
+                shares: 'שיתוף (3k)',
+                intro: 'בניית אתר בקוד מותאם אישית אומרת שכל רכיב, כל עמוד וכל אינטראקציה נבנו עם המטרה העסקית שלך בראש. אין תבניות שמגבילות, אין מגבלות שאי אפשר לפרוץ.',
+                quote: 'אתר שנבנה עם הבנה של העסק מוביל לתוצאות הרבה יותר טובות מאתר שנבנה עם תבנית מוכנה.',
+                author: 'יוסי בן-דוד,',
+                role: 'מפתח ראשי',
+                authorBio: 'מפתח ראשי שמתמחה בבניית אתרים עסקיים בקוד נקי ומותאם אישית לכל לקוח.',
+                body: 'כשבונים אתר בקוד, כל כותרת, כפתור ומקטע מתוכננים כדי לשרת מטרה מסוימת. כך האתר נראה ייחודי, נטען מהר ומוביל את הגולשים לפעולה שרוצים שהם יעשו. בלי עומס של תוספים, בלי תלות בפלטפורמה וללא פשרות.',
+                tags: ['קוד מותאם', 'פיתוח', 'עסקים']
             },
             'clean-code': {
                 title: 'קוד נקי שמטעין מהר וממיר יותר',
                 image: 'assets/images/blog/clean-code-performance-article.png',
                 alt: 'קוד נקי שמטעין מהר וממיר יותר',
-                intro: 'מהירות טעינה היא לא רק עניין טכני, היא משפיעה ישירות על חוויית המשתמש ועל כמות הפניות שהאתר מייצר. קוד נקי ורזה מוריד עומסים מיותרים ומציג לגולש את המסר במהירות.',
-                quote: 'אתר מהיר מרגיש מקצועי יותר, משאיר יותר גולשים ומגדיל את הסיכוי לפנייה.',
-                author: 'נועה לוי,',
-                role: 'מומחית חוויית משתמש',
-                authorImage: 'assets/images/blog/author-noa.jpg',
-                authorAlt: 'נועה לוי',
-                authorBio: 'מומחית חוויית משתמש שמלווה עסקים בשיפור מהירות, זרימה ונגישות של אתרים כדי להפוך ביקורים לפניות איכותיות.',
-                body: 'כאשר האתר לא עמוס בתוספים, ספריות מיותרות ותבניות כבדות, כל עמוד נטען בצורה חלקה יותר. זה משפר את חוויית הגלישה, את הנראות בגוגל ואת היכולת להפוך מבקרים ללקוחות.',
-                tags: ['קוד נקי', 'ביצועים', 'המרות']
+                date: '25 מרץ 2022',
+                comments: 'תגובות (5)',
+                shares: 'שיתוף (4k)',
+                intro: 'מהירות טעינה היא לא רק נוחות — היא גורם מכריע בדירוג בגוגל ובשיעור ההמרה של הדף. קוד נקי ומינימלי אומר שהגולש רואה את האתר שלך מהר יותר, נשאר יותר זמן וממיר בשיעור גבוה יותר.',
+                quote: 'כל שנייה שנחסכת בטעינה שווה המרות נוספות — וקוד נקי הוא הדרך הכי ישירה לשם.',
+                author: 'יוסי בן-דוד,',
+                role: 'מפתח ראשי',
+                authorBio: 'מפתח ראשי שמתמחה באופטימיזציית ביצועים ובניית אתרים מהירים שמניבים תוצאות.',
+                body: 'מבנה HTML נכון, CSS יעיל וJavaScript מינימלי יוצרים אתר שגוגל אוהב ומשתמשים נהנים ממנו. כשמנקים את הקוד מכפילויות ועומסים מיותרים, מקבלים אתר שעובד מהר בכל מכשיר ורשת.',
+                tags: ['ביצועים', 'מהירות', 'המרות']
             },
             'full-control': {
                 title: 'שליטה מלאה בלי תלות בפלטפורמות',
                 image: 'assets/images/blog/full-control-platform-article.png',
                 alt: 'שליטה מלאה בלי תלות בפלטפורמות',
-                intro: 'אתר בקוד נותן לך בעלות ושליטה מלאה על מה שקורה באתר. אין צורך להתאים את העסק למגבלות של מערכת, תבנית או תוסף שלא נבנו במיוחד בשבילך.',
-                quote: 'כשאין תלות בפלטפורמה, אפשר לשנות, לשפר ולהרחיב את האתר בדיוק לפי הצורך.',
-                author: 'איתי שרון,',
-                role: 'מפתח Full Stack',
-                authorImage: 'assets/images/blog/author-itai.jpg',
-                authorAlt: 'איתי שרון',
-                authorBio: 'מפתח Full Stack שמתמקד בבניית מערכות ואתרים גמישים, עצמאיים וניתנים להרחבה בלי תלות בפלטפורמות סגורות.',
-                body: 'פיתוח עצמאי מאפשר להוסיף פונקציות, לשנות עיצוב, לבצע אופטימיזציה ולתחזק את האתר בלי להיות כבול למערכת חיצונית. זה נותן גמישות לטווח ארוך ומונע עלויות ותלויות מיותרות.',
-                tags: ['שליטה מלאה', 'ללא תבניות', 'גמישות']
+                date: '25 מרץ 2022',
+                comments: 'תגובות (5)',
+                shares: 'שיתוף (2k)',
+                intro: 'כשהאתר שלך בנוי בקוד, הוא שייך לך לחלוטין. אין מנויים חודשיים, אין עדכוני פלטפורמה ששוברים דברים ואין מגבלות על מה שאפשר לשנות.',
+                quote: 'האתר שלך צריך לשרת את העסק שלך — לא להיות כבול לכללים של פלטפורמה חיצונית.',
+                author: 'יוסי בן-דוד,',
+                role: 'מפתח ראשי',
+                authorBio: 'מפתח ראשי שמאמין שהשליטה על האתר שייכת לבעל העסק, לא לפלטפורמה.',
+                body: 'אתר בקוד נקי מאפשר לבצע כל שינוי בלי לשבור דברים אחרים, לעבור בין שרתים בקלות ולשלוט בכל היבט של האתר. אין תוספים שמאטים, אין מנויים שמתייקרים ואין תלות בהחלטות של חברה חיצונית.',
+                tags: ['עצמאות', 'קוד', 'שליטה']
             },
             'conversion-design': {
                 title: 'עיצוב ופיתוח שמובילים לפעולה',
                 image: 'assets/images/blog/conversion-design-article.png',
                 alt: 'עיצוב ופיתוח שמובילים לפעולה',
-                intro: 'אתר יפה הוא רק ההתחלה. כדי שהאתר יעבוד בשביל העסק, כל כותרת, תמונה, כפתור ומקטע צריכים להוביל את הגולש בצורה טבעית לפעולה הבאה.',
-                quote: 'עיצוב נכון לא רק נראה טוב, הוא גורם לגולש להבין מהר למה כדאי לו לפנות.',
+                date: '25 מרץ 2022',
+                comments: 'תגובות (5)',
+                shares: 'שיתוף (5k)',
+                intro: 'אתר טוב לא רק נראה יפה — הוא מוביל את הגולש לפעולה. כל כותרת, כפתור ומקטע מתוכננים כדי להפוך מבקרים ללקוחות משלמים.',
+                quote: 'עיצוב שממיר מתחיל בהבנה של מה שהגולש צריך לראות, לחשוב ולהרגיש בכל שלב.',
+                author: 'יוסי בן-דוד,',
+                role: 'מפתח ומעצב',
+                authorBio: 'מפתח ומעצב שמשלב פסיכולוגיית משתמשים עם קוד נקי כדי לבנות אתרים שממירים.',
+                body: 'עיצוב ממיר מתחיל בהיררכיה ויזואלית ברורה, המשך בטקסט שמדבר ישירות לצורך של הגולש וסיום בכפתור קריאה לפעולה שבולט ומניע. כשכל הרכיבים עובדים יחד, שיעור ההמרה עולה בצורה משמעותית.',
+                tags: ['המרות', 'עיצוב', 'CRO']
+            },
+            'clean-architecture': {
+                title: 'איך בונים ארכיטקטורת קוד נקייה שמחזיקה לאורך זמן',
+                image: 'assets/images/blog/code-clean-architecture.png',
+                alt: 'תמונת מאמר על ארכיטקטורת קוד נקייה',
+                date: '25 פברואר 2022',
+                comments: 'תגובות (05)',
+                shares: 'שיתוף (5k)',
+                intro: 'ארכיטקטורת קוד טובה מפרידה בין לוגיקה עסקית, תשתיות וממשקי משתמש. כשהגבולות ברורים, קל יותר להוסיף פיצ\'רים, לתקן באגים ולשמור על מוצר יציב גם כשהמערכת גדלה.',
+                quote: 'קוד נקי הוא לא רק עניין של סגנון, אלא הדרך שבה הצוות שומר על מהירות, יציבות והבנה משותפת לאורך זמן.',
+                author: 'דניאל כהן,',
+                role: 'ארכיטקט תוכנה',
+                authorBio: 'ארכיטקט תוכנה שמלווה צוותים בבניית מערכות יציבות, מודולריות וקלות לתחזוקה.',
+                body: 'כדי לבנות מערכת שמחזיקה לאורך זמן צריך להגדיר גבולות ברורים בין שכבות, לשמור על שמות שמסבירים כוונה ולתעד החלטות משמעותיות. מבנה כזה מאפשר להחליף תשתיות, להוסיף מסכים ולתקן תקלות בלי לפתוח מחדש את כל המערכת.',
+                tags: ['Clean Code', 'ארכיטקטורה', 'תחזוקה']
+            },
+            'api-development': {
+                title: 'פיתוח API יציב: חוזים ברורים, תגובות מהירות ואינטגרציות קלות',
+                image: 'assets/images/blog/code-api-development.png',
+                alt: 'תמונת מאמר על פיתוח API',
+                date: '12 מרץ 2022',
+                comments: 'תגובות (08)',
+                shares: 'שיתוף (7k)',
+                intro: 'API איכותי מתחיל במבנה נתונים צפוי, שמות עקביים וטיפול נכון בשגיאות. תכנון מוקדם של הרשאות, גרסאות ותיעוד מקצר את זמן הפיתוח ומונע תקלות בין צוותים.',
+                quote: 'כשחוזה ה-API ברור, כל צוות יכול להתקדם מהר יותר בלי לנחש מה המערכת מחזירה ומתי.',
+                author: 'נועה לוי,',
+                role: 'מפתחת Backend',
+                authorBio: 'מפתחת Backend שמתמחה בתכנון ממשקי API יציבים, מאובטחים וקלים לאינטגרציה.',
+                body: 'פיתוח API נכון כולל נקודות קצה עם שמות עקביים, סטטוסים מדויקים, ולידציה ברורה ותיעוד שמתעדכן יחד עם הקוד. כך אפשר לחבר מערכות חיצוניות, אפליקציות וממשקי ניהול בלי לייצר תלות מיותרת בין צוותים.',
+                tags: ['API', 'Backend', 'אינטגרציות']
+            },
+            'frontend-components': {
+                title: 'רכיבי Frontend חכמים שמאיצים בניית ממשקים',
+                image: 'assets/images/blog/code-frontend-components.png',
+                alt: 'תמונת מאמר על פיתוח רכיבי Frontend',
+                date: '28 מרץ 2022',
+                comments: 'תגובות (12)',
+                shares: 'שיתוף (9k)',
+                intro: 'ספריית רכיבים מסודרת הופכת עיצוב לקוד שימושי, נגיש ועקבי. כשכל כפתור, טופס וכרטיס בנויים נכון, הצוות יכול לבנות מסכים חדשים מהר יותר בלי לוותר על איכות.',
+                quote: 'רכיב טוב חוסך החלטות חוזרות ומאפשר לצוות להתמקד בחוויה ולא בבנייה מחדש של אותו כפתור.',
+                author: 'איתי שרון,',
+                role: 'מפתח Frontend',
+                authorBio: 'מפתח Frontend שמתמחה בבניית מערכות עיצוב, רכיבים נגישים וממשקים רספונסיביים.',
+                body: 'כדי שרכיבים ישרתו את המוצר לאורך זמן הם צריכים לקבל API פשוט, מצבים ברורים ותמיכה בנגישות ובמובייל. כאשר הרכיבים מחוברים לשפת העיצוב, כל מסך חדש נראה עקבי ומרגיש כחלק מאותה מערכת.',
+                tags: ['Frontend', 'רכיבים', 'UI']
+            },
+            'automated-tests': {
+                title: 'בדיקות אוטומטיות שמאפשרות לשחרר קוד בביטחון',
+                image: 'assets/images/blog/code-automated-tests.png',
+                alt: 'תמונת מאמר על בדיקות אוטומטיות בקוד',
+                date: '06 אפריל 2022',
+                comments: 'תגובות (06)',
+                shares: 'שיתוף (4k)',
+                intro: 'בדיקות יחידה, אינטגרציה ו-E2E מגנות על תהליכים קריטיים ומגלות בעיות לפני הלקוח. כיסוי נכון לא נועד לבדוק כל שורה, אלא להבטיח שהמוצר ממשיך לעבוד כשמוסיפים קוד חדש.',
+                quote: 'בדיקה טובה נותנת לצוות אומץ לשנות קוד, כי היא מזהירה כשמשהו חשוב נשבר.',
                 author: 'מיכל אברהם,',
-                role: 'מעצבת ממשקים',
-                authorImage: 'assets/images/blog/author-michal.jpg',
-                authorAlt: 'מיכל אברהם',
-                authorBio: 'מעצבת ממשקים שמחברת בין עיצוב, מסרים וחוויית משתמש כדי ליצור אתרים שמובילים את הגולש לפעולה ברורה.',
-                body: 'שילוב נכון בין עיצוב ופיתוח מאפשר ליצור מסלול גלישה ברור: מהמסר הראשון, דרך הצגת היתרונות ועד יצירת קשר. כך האתר הופך מכלי תדמיתי לכלי שמייצר פניות אמיתיות.',
-                tags: ['עיצוב ממיר', 'חוויית משתמש', 'קריאה לפעולה']
+                role: 'מהנדסת QA אוטומציה',
+                authorBio: 'מהנדסת QA אוטומציה שבונה תהליכי בדיקה שמקצרים שחרורים ומפחיתים תקלות בפרודקשן.',
+                body: 'אסטרטגיית בדיקות מאוזנת מתחילה בתהליכים העסקיים החשובים ביותר. בדיקות מהירות רצות בכל שינוי, בדיקות אינטגרציה בודקות חיבורים בין חלקי המערכת ובדיקות E2E שומרות על המסלולים שהמשתמשים באמת עוברים.',
+                tags: ['בדיקות', 'QA', 'CI']
+            },
+            'performance': {
+                title: 'אופטימיזציית ביצועים בקוד: פחות עומס, יותר מהירות',
+                image: 'assets/images/blog/code-performance.png',
+                alt: 'תמונת מאמר על שיפור ביצועי קוד',
+                date: '18 אפריל 2022',
+                comments: 'תגובות (09)',
+                shares: 'שיתוף (8k)',
+                intro: 'ביצועים טובים מתחילים במדידה: זמני טעינה, גודל חבילות, שאילתות איטיות וזיכרון. אחרי שמזהים את צוואר הבקבוק, אפשר לשפר קאשינג, טעינה עצלה ויעילות אלגוריתמית בצורה מדויקת.',
+                quote: 'לפני שמאיצים מערכת צריך לדעת מה באמת איטי, אחרת משפרים את המקום הלא נכון.',
+                author: 'דניאל כהן,',
+                role: 'יועץ ביצועים',
+                authorBio: 'יועץ ביצועים שעוזר לצוותים למדוד, לאתר צווארי בקבוק ולבנות חוויית משתמש מהירה יותר.',
+                body: 'שיפור ביצועים יעיל משלב מדידה, סדר עדיפויות ופתרונות ממוקדים. לפעמים השיפור מגיע מקאשינג נכון, לפעמים מצמצום JavaScript ולפעמים משאילתה אחת שמעמיסה על השרת. המטרה היא להפוך את המערכת למהירה בלי לסבך אותה.',
+                tags: ['ביצועים', 'קאשינג', 'מהירות']
+            },
+            'security': {
+                title: 'אבטחת קוד כבר משלב הפיתוח: ולידציה, הרשאות וסודות',
+                image: 'assets/images/blog/code-security.png',
+                alt: 'תמונת מאמר על אבטחת קוד',
+                date: '02 מאי 2022',
+                comments: 'תגובות (04)',
+                shares: 'שיתוף (3k)',
+                intro: 'קוד מאובטח לא מתחיל בסוף הפרויקט. הוא מתחיל בבדיקת קלט, ניהול הרשאות, שמירה נכונה של מפתחות וסריקה רציפה של תלותים כדי לצמצם סיכונים לפני שהם מגיעים לפרודקשן.',
+                quote: 'אבטחה טובה היא הרגל פיתוח יומיומי, לא רשימת תיקונים שמחכים לסוף הפרויקט.',
+                author: 'נועה לוי,',
+                role: 'מומחית אבטחת אפליקציות',
+                authorBio: 'מומחית אבטחת אפליקציות שמטמיעה תהליכי פיתוח מאובטח בצוותי מוצר ופיתוח.',
+                body: 'כדי להקטין סיכונים צריך לאמת קלט בכל שכבה, להפריד הרשאות לפי תפקידים, לא לשמור סודות בקוד ולבדוק תלותים באופן קבוע. שילוב של בדיקות אוטומטיות וסקירות קוד ממוקדות אבטחה עוזר לתפוס בעיות לפני שהן הופכות לאירוע.',
+                tags: ['אבטחה', 'הרשאות', 'ולידציה']
+            },
+            'devops-deploy': {
+                title: 'DevOps לפרויקטי קוד: CI/CD, בדיקות ופריסה חלקה',
+                image: 'assets/images/blog/code-devops-deploy.png',
+                alt: 'תמונת מאמר על DevOps ופריסת קוד',
+                date: '15 מאי 2022',
+                comments: 'תגובות (11)',
+                shares: 'שיתוף (6k)',
+                intro: 'תהליך פריסה טוב מחבר בין Git, בדיקות, בנייה וסביבות ענן. כשהצינור אוטומטי וברור, אפשר לשחרר גרסאות קטנות בתדירות גבוהה ולזהות תקלות במהירות.',
+                quote: 'פריסה טובה הופכת שחרור גרסה מפעולה מלחיצה להרגל עבודה רגיל וצפוי.',
+                author: 'איתי שרון,',
+                role: 'מהנדס DevOps',
+                authorBio: 'מהנדס DevOps שבונה תהליכי CI/CD יציבים, ניטור וסביבות פריסה שמאפשרים לצוותים לשחרר מהר יותר.',
+                body: 'צינור CI/CD יעיל מריץ בדיקות, בונה את הפרויקט, מפרסם ארטיפקטים ומעדכן סביבה בצורה עקבית. יחד עם ניטור והתראות, הצוות מקבל תמונה ברורה של כל שחרור ויכול לחזור אחורה במהירות אם משהו משתבש.',
+                tags: ['DevOps', 'CI/CD', 'פריסה']
+            },
+            'refactor': {
+                title: 'ריפקטורינג נכון: להפוך קוד מסובך לקוד שקל לעבוד איתו',
+                image: 'assets/images/blog/code-refactor.png',
+                alt: 'תמונת מאמר על ריפקטורינג וקוד נקי',
+                date: '30 מאי 2022',
+                comments: 'תגובות (07)',
+                shares: 'שיתוף (5k)',
+                intro: 'ריפקטורינג מוצלח משפר שמות, מפרק פונקציות גדולות ומסיר כפילויות בלי לשנות התנהגות. כשעושים אותו בשלבים קטנים ומגובים בבדיקות, הקוד הופך ברור יותר והתחזוקה זולה יותר.',
+                quote: 'ריפקטורינג טוב לא משנה את מה שהמשתמש רואה, הוא משנה כמה קל לצוות להמשיך לבנות.',
+                author: 'מיכל אברהם,',
+                role: 'מובילת פיתוח',
+                authorBio: 'מובילת פיתוח שעוזרת לצוותים להפוך קוד מורכב למבנה ברור, מדיד ונוח להמשך עבודה.',
+                body: 'כדאי להתחיל ריפקטורינג באזורים שמאטיים את העבודה או יוצרים באגים חוזרים. מפרקים שינוי גדול לצעדים קטנים, מוסיפים בדיקות סביב ההתנהגות הקיימת ורק אז משפרים מבנה, שמות וחלוקת אחריות.',
+                tags: ['ריפקטורינג', 'קוד נקי', 'תחזוקה']
             }
         };
 
-        const articleKey = new URLSearchParams(window.location.search).get('article') || 'custom-code';
-        const selectedArticle = articleContent[articleKey] || articleContent['custom-code'];
+        const requestedArticleKey = new URLSearchParams(window.location.search).get('article') || 'clean-architecture';
+        const articleKey = articleContent[requestedArticleKey] ? requestedArticleKey : 'clean-architecture';
+        const selectedArticle = articleContent[articleKey];
         const tagIds = ['article-tag-one', 'article-tag-two', 'article-tag-three'];
+        const authorImages = {
+            'יוסי בן-דוד': 'assets/images/blog/author-daniel.jpg',
+            'דניאל כהן': 'assets/images/blog/author-daniel.jpg',
+            'נועה לוי': 'assets/images/blog/author-noa.jpg',
+            'איתי שרון': 'assets/images/blog/author-itai.jpg',
+            'מיכל אברהם': 'assets/images/blog/author-michal.jpg'
+        };
+        const authorName = selectedArticle.author.replace(',', '').trim();
 
         document.title = `Sland - ${selectedArticle.title}`;
         document.getElementById('article-page-title').textContent = selectedArticle.title;
         document.getElementById('article-image').src = selectedArticle.image;
         document.getElementById('article-image').alt = selectedArticle.alt;
+        document.getElementById('article-date').textContent = selectedArticle.date;
+        document.getElementById('article-date').href = `blog-details.html?article=${articleKey}`;
+        document.getElementById('article-comments').textContent = selectedArticle.comments;
+        document.getElementById('article-shares').textContent = selectedArticle.shares;
+        document.getElementById('article-id').textContent = articleKey;
+        document.getElementById('article-id').href = `blog-details.html?article=${articleKey}`;
         document.getElementById('article-title').textContent = selectedArticle.title;
         document.getElementById('article-intro').textContent = selectedArticle.intro;
         document.getElementById('article-quote').textContent = selectedArticle.quote;
         document.getElementById('article-author').textContent = selectedArticle.author;
         document.getElementById('article-role').textContent = selectedArticle.role;
-        document.getElementById('article-author-image').src = selectedArticle.authorImage;
-        document.getElementById('article-author-image').alt = selectedArticle.authorAlt;
-        document.getElementById('article-author-card-name').textContent = selectedArticle.authorAlt;
+        document.getElementById('article-author-image').src = authorImages[authorName] || 'assets/images/blog/author-daniel.jpg';
+        document.getElementById('article-author-image').alt = authorName;
+        document.getElementById('article-author-card-name').textContent = authorName;
         document.getElementById('article-author-bio').textContent = selectedArticle.authorBio;
         document.getElementById('article-body').textContent = selectedArticle.body;
         tagIds.forEach((tagId, index) => {
