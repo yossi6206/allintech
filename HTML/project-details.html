@@ -209,6 +209,10 @@
                                     <span>כתובת</span>
                                     <h4 id="project-location">רחוב ראשי 75, תל אביב</h4>
                                 </div>
+                                <div class="project-info-item" id="project-url-item" style="display:none;">
+                                    <span>קישור לפרויקט</span>
+                                    <h4><a id="project-url" href="#" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline; word-break:break-all;"></a></h4>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -369,7 +373,8 @@
                 client: "עסק שירותים מקומי",
                 date: "12 בינואר 2026",
                 location: "תל אביב",
-                image: "assets/images/projects/project1.jpg",
+                url: "https://allintech.co.il/",
+                image: "assets/images/projects/business-website-hero.png",
                 article: "בפרויקט זה פיתחנו אתר תדמית מקצועי שמטרתו להציג את העסק בצורה ברורה, אמינה ומזמינה. העבודה התחילה באפיון המסרים המרכזיים: מי העסק, אילו שירותים הוא מציע, מה היתרון שלו מול מתחרים ואיך גורמים למבקר להשאיר פרטים במהירות. לאחר מכן בנינו מבנה עמודים פשוט ונוח, הכולל דף בית, אזורי שירותים, יתרונות, המלצות וטופס יצירת קשר.\n\nבשלב הפיתוח שמנו דגש על טעינה מהירה, התאמה מלאה למובייל, היררכיית תוכן נכונה וקוד שקל לתחזק בהמשך. האתר בנוי כך שאפשר להוסיף שירותים חדשים, לעדכן תמונות ולהרחיב אזורי תוכן בלי לשנות את כל המבנה. התוצאה היא נכס דיגיטלי שמחזק את המותג, משפר את האמון של הלקוחות ומייצר פניות איכותיות דרך האתר.",
                 summary: "הפרויקט הסתיים באתר תדמית יציב, מהיר וברור, עם חוויית משתמש שמובילה את המבקר מהיכרות ראשונית ועד יצירת קשר. האתר מתאים לעסק שרוצה נוכחות מקצועית ומקום מסודר לרכז בו את השירותים, ההמלצות והיתרונות שלו."
             },
@@ -480,6 +485,13 @@
         document.getElementById('project-client').textContent = project.client;
         document.getElementById('project-date').textContent = project.date;
         document.getElementById('project-location').textContent = project.location;
+        if (project.url) {
+            const urlItem = document.getElementById('project-url-item');
+            const urlLink = document.getElementById('project-url');
+            urlLink.href = project.url;
+            urlLink.textContent = project.url;
+            urlItem.style.display = '';
+        }
         document.getElementById('project-summary').textContent = project.summary;
     </script>
 
