@@ -1,0 +1,12 @@
+# robots.txt – allintech
+# עדכן את development.allintech.co.il לכתובת הדומיין האמיתי שלך לפני ההעלאה
+
+User-agent: *
+Allow: /
+
+# חסום גישה לקבצי PHP (שרת)
+Disallow: /contact-handler.php
+Disallow: /send-email.php
+
+# Sitemap
+Sitemap: https://development.allintech.co.il/sitemap.xml
